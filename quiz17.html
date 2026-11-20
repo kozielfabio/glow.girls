@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seu diagnóstico chegou · Protocolo da Inversão Feminina</title>
+<meta name="theme-color" content="#FBF7F3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --cream:#FBF7F3;--paper:#FFFDFB;--sand:#F3EAE2;--blush:#F7E6E3;--blush-2:#EFD3D0;
+  --rose:#A6506A;--rose-2:#C2708A;--rose-deep:#8E3D57;--rose-light:#EBA9B9;
+  --gold:#B8925A;--gold-ink:#8A6A3B;--gold-soft:#E4CFA8;
+  --ink:#2A1E1B;--cocoa:#6B5650;--line:#EADDD3;--espresso:#241A17;
+  --shadow:0 22px 50px -26px rgba(110,60,50,.4);
+}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--cream);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+button{font-family:inherit}
+img{display:block;max-width:100%}
+.glow{position:fixed;inset:0;pointer-events:none;z-index:0;background:
+  radial-gradient(70% 42% at 0% 0%, rgba(239,211,208,.85), transparent 70%),
+  radial-gradient(60% 40% at 100% 30%, rgba(228,207,168,.4), transparent 70%),
+  radial-gradient(70% 40% at 50% 105%, rgba(247,230,227,.9), transparent 70%)}
+.page{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:22px 20px calc(56px + env(safe-area-inset-bottom))}
+.brand{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:20px}
+.brand i{width:22px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));flex-shrink:0}
+.brand i:last-child{background:linear-gradient(90deg,var(--gold),transparent)}
+.brand span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);font-weight:700;white-space:nowrap}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);font-weight:800;margin-bottom:12px}
+.eyebrow.light{color:var(--gold-soft)}
+h2.h{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(32px,8.6vw,40px);line-height:1.03;letter-spacing:-.01em;margin-bottom:12px}
+h2.h em{font-style:italic;color:var(--rose)}
+.sub{font-size:16px;color:var(--cocoa);margin-bottom:20px}
+.hand{font-family:'Caveat',cursive;font-size:24px;line-height:1.15;color:var(--rose);display:inline-block;transform:rotate(-1.5deg)}
+
+/* botão */
+.btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:19px 22px;border-radius:99px;border:0;cursor:pointer;background:linear-gradient(135deg,#BE6C84 0%,var(--rose) 55%,var(--rose-deep) 100%);color:#fff;font-weight:800;font-size:16.5px;text-decoration:none;box-shadow:0 18px 32px -16px rgba(142,61,87,.85),inset 0 1px 0 rgba(255,255,255,.25);overflow:hidden;transition:transform .15s}
+.btn::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.3) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.4s 1s infinite}
+@keyframes shine{0%{transform:translateX(-120%)}35%,100%{transform:translateX(120%)}}
+.btn:active{transform:scale(.98)}
+.btn .arr{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;flex-shrink:0}
+.btn-sub{text-align:center;font-size:12.5px;color:var(--cocoa);margin-top:11px;font-weight:600}
+
+/* portão / envelope */
+.gate{text-align:center;padding-top:8px;transition:opacity .45s ease,transform .45s ease}
+.gate.bye{opacity:0;transform:translateY(-14px)}
+.gate h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(40px,11vw,52px);line-height:1;letter-spacing:-.015em;margin:4px 0 12px}
+.gate h1 em{font-style:italic;color:var(--rose)}
+.gate .sub{max-width:330px;margin:0 auto}
+.env-stage{display:grid;place-items:center;margin:38px 0 34px}
+.env{position:relative;width:min(300px,80vw);aspect-ratio:3/2;cursor:pointer;border:0;background:none;padding:0;perspective:900px;animation:float 3.8s ease-in-out infinite}
+.env:focus-visible{outline:3px solid var(--rose-2);outline-offset:10px;border-radius:14px}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-9px) rotate(1.2deg)}}
+.env .shadow{position:absolute;left:8%;right:8%;bottom:-26px;height:18px;border-radius:50%;background:radial-gradient(closest-side,rgba(110,60,50,.25),transparent);animation:shad 3.8s ease-in-out infinite}
+@keyframes shad{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.88);opacity:.7}}
+.env .back{position:absolute;inset:0;border-radius:12px;background:#E3C9BB}
+.env .letter{position:absolute;left:7%;right:7%;top:7%;height:86%;background:var(--paper);border-radius:8px;z-index:1;transition:transform 1s .45s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;align-items:center;padding-top:14px;box-shadow:0 2px 10px rgba(110,60,50,.12)}
+.letter .lt{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-ink);font-weight:800}
+.letter .to{font-family:'Caveat',cursive;font-size:26px;color:var(--rose);line-height:1.1;margin-top:2px}
+.letter .ln{width:60%;height:2px;border-radius:2px;background:var(--sand);margin-top:8px}
+.letter .ln.s{width:42%;margin-top:6px}
+.env .pocket{position:absolute;inset:0;z-index:2;border-radius:12px;background:linear-gradient(165deg,#F7E9E0 0%,#EED8CB 100%);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%)}
+.env .flap{position:absolute;left:0;right:0;top:0;height:60%;z-index:3;transform-origin:50% 0;background:linear-gradient(180deg,#E6CABB,#EBD4C7);clip-path:polygon(0 0,100% 0,50% 100%);transition:transform .65s cubic-bezier(.4,0,.2,1),z-index 0s .32s;border-radius:12px 12px 0 0}
+.env .seal{position:absolute;left:50%;top:60%;width:54px;height:54px;margin:-27px 0 0 -27px;z-index:4;border-radius:50%;background:radial-gradient(circle at 34% 30%,#F5E2BA,#CBA266 55%,#98723D);display:grid;place-items:center;box-shadow:0 5px 12px rgba(110,70,30,.35),inset 0 0 0 3px rgba(255,255,255,.2);transition:transform .45s,opacity .45s}
+.env .seal span{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:26px;color:#FFF7EA;line-height:1;margin-top:-2px}
+.env.open{animation:none}
+.env.open .flap{transform:rotateX(180deg);z-index:0}
+.env.open .seal{transform:scale(.3) rotate(40deg);opacity:0}
+.env.open .letter{transform:translateY(-50%)}
+.gate .eyebrow,.gate h1,.gate>.sub,.gate .tapnote,.gate #openBtn{transition:opacity .45s ease}
+.gate.opening .eyebrow,.gate.opening h1,.gate.opening>.sub,.gate.opening .tapnote,.gate.opening #openBtn{opacity:0}
+.tapnote{display:block;margin-top:14px}
+
+/* conteúdo */
+.content[hidden]{display:none}
+.content{animation:fadeIn .7s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.sec{margin-top:58px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:26px 22px}
+.result{position:relative;overflow:hidden;text-align:center;padding-top:30px}
+.result::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold-soft),var(--rose-2),var(--rose))}
+.hello{font-family:'Caveat',cursive;font-size:25px;color:var(--rose);line-height:1.1;margin-bottom:6px}
+.pname{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:clamp(42px,12vw,56px);line-height:.95;color:var(--rose);letter-spacing:-.015em;margin:4px 0 12px}
+.pline{font-size:17px;font-weight:800;line-height:1.4;color:var(--ink);max-width:320px;margin:0 auto 14px}
+.pdesc{font-size:15.5px;color:var(--cocoa);text-align:left;line-height:1.65}
+.meter{margin-top:22px;text-align:left;background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:15px 16px}
+.mtop{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:10px;font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--cocoa)}
+.mtop strong{font-size:14px;letter-spacing:0;text-transform:none;color:var(--rose)}
+.d10{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}
+.d10 i{height:10px;border-radius:99px;background:var(--sand);transition:background .4s}
+.d10 i.f{background:linear-gradient(90deg,var(--rose-2),var(--rose))}
+.bars{margin-top:20px;display:flex;flex-direction:column;gap:12px;text-align:left}
+.brow .bl{display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-bottom:5px;color:var(--cocoa)}
+.brow.top .bl{color:var(--ink)}
+.brow .bl b{color:var(--rose)}
+.track{height:9px;border-radius:99px;background:var(--sand);overflow:hidden}
+.track span{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--gold-soft),var(--rose-2));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.brow.top .track span{background:linear-gradient(90deg,var(--rose-2),var(--rose))}
+.fine{font-size:12px;color:var(--cocoa);margin-top:16px;opacity:.85}
+.nodata{text-align:center}
+.nodata p{color:var(--cocoa);margin:8px 0 18px}
+
+/* sinais */
+.signs{display:flex;flex-direction:column;gap:10px}
+.sign{display:flex;align-items:center;gap:13px;width:100%;text-align:left;background:var(--paper);border:1.5px solid var(--line);border-radius:20px;padding:15px 15px;font-size:15.5px;font-weight:600;line-height:1.4;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s,transform .12s}
+.sign:active{transform:scale(.985)}
+.sign .hrt{width:40px;height:40px;border-radius:50%;background:var(--blush);display:grid;place-items:center;flex-shrink:0;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.sign .hrt path{fill:transparent;stroke:var(--rose);stroke-width:1.8;transition:fill .2s}
+.sign[aria-pressed="true"]{border-color:var(--rose-2);background:linear-gradient(135deg,#FFF8F7,#FBEDEB)}
+.sign[aria-pressed="true"] .hrt{transform:scale(1.12)}
+.sign[aria-pressed="true"] .hrt path{fill:var(--rose)}
+.signs-out{margin-top:14px;text-align:center;min-height:28px}
+
+/* ciclo */
+.cycle{position:relative;width:min(310px,84vw);aspect-ratio:1;margin:8px auto 0}
+.cycle svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cycle .ring{fill:none;stroke:var(--gold-soft);stroke-width:1.5;stroke-dasharray:3 7}
+.cycle .arc{fill:none;stroke:url(#cg);stroke-width:3;stroke-linecap:round}
+.orbit{transform-origin:150px 150px}
+.cycle.run .orbit{animation:orb 10.4s linear infinite}
+@keyframes orb{to{transform:rotate(360deg)}}
+.spark{fill:var(--rose)}
+.spark-g{fill:rgba(194,112,138,.25)}
+.node{position:absolute;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;border:1.5px solid var(--line);background:var(--paper);font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:24px;color:var(--gold-ink);cursor:pointer;box-shadow:0 10px 20px -14px rgba(110,60,50,.7);transition:all .35s cubic-bezier(.3,1.4,.5,1)}
+.node.on{background:linear-gradient(135deg,var(--rose-2),var(--rose));border-color:var(--rose);color:#fff;transform:scale(1.14);box-shadow:0 0 0 7px rgba(194,112,138,.16),0 14px 24px -12px rgba(142,61,87,.8)}
+.n0{left:50%;top:12.7%}.n1{left:87.3%;top:50%}.n2{left:50%;top:87.3%}.n3{left:12.7%;top:50%}
+.center{position:absolute;inset:27%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle,#fff 0%,rgba(255,253,251,.4) 70%,transparent 72%)}
+.center small{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-ink);font-weight:800;margin-bottom:4px}
+.center em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:26px;line-height:1.02;color:var(--rose);transition:opacity .25s}
+.cstep{margin-top:26px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:18px 18px;display:flex;gap:14px;align-items:flex-start;min-height:118px;box-shadow:0 14px 28px -24px rgba(110,60,50,.7)}
+.cstep .cn{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:34px;line-height:.9;color:var(--gold)}
+.cstep strong{display:block;font-size:16px;line-height:1.3;margin-bottom:4px}
+.cstep p{font-size:14.5px;color:var(--cocoa);line-height:1.55}
+.cstep .ct{transition:opacity .25s}
+
+/* virada */
+.turn{background:var(--espresso);color:#F6EDE6;border-radius:30px;padding:34px 24px;position:relative;overflow:hidden}
+.turn::before{content:'';position:absolute;inset:-40% -30% auto auto;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(194,112,138,.35),transparent 70%)}
+.turn>*{position:relative}
+.turn h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(34px,9vw,42px);line-height:1.02;margin-bottom:10px}
+.turn h2 em{font-style:italic;color:var(--rose-light)}
+.turn p{font-size:16px;color:rgba(246,237,230,.82);line-height:1.6}
+.turn .big{font-family:'Cormorant Garamond',serif;font-size:25px;line-height:1.2;color:#fff;margin:20px 0 22px;font-style:italic}
+.turn .big strong{font-style:normal;color:var(--gold-soft);font-weight:700}
+.change{border-top:1px solid rgba(228,207,168,.25);padding-top:18px}
+.change span{display:block;font-family:'Caveat',cursive;font-size:24px;color:var(--rose-light);margin-bottom:4px}
+.change p{color:#fff;font-weight:600}
+
+/* prova */
+.proof{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:6px 20px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.proof::-webkit-scrollbar{display:none}
+.pi{flex:0 0 84%;scroll-snap-align:center;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:14px;box-shadow:0 16px 30px -24px rgba(110,60,50,.7)}
+.pi .cap{font-family:'Caveat',cursive;font-size:23px;line-height:1.15;color:var(--rose-deep);margin:0 4px 10px}
+.pi img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.pdots{display:flex;justify-content:center;gap:7px;margin-top:2px}
+.pdots i{width:7px;height:7px;border-radius:99px;background:var(--blush-2);transition:all .3s}
+.pdots i.on{width:24px;background:var(--rose)}
+
+/* recado */
+.note{text-align:center}
+.arch{width:170px;height:220px;margin:0 auto 22px;position:relative}
+.arch::before{content:'';position:absolute;inset:-8px -8px -8px 8px;border:1.5px solid var(--gold-soft);border-radius:100px 100px 18px 18px}
+.arch img{position:relative;width:100%;height:100%;object-fit:cover;object-position:50% 14%;border-radius:100px 100px 18px 18px;box-shadow:0 24px 40px -20px rgba(60,30,25,.55)}
+.ltxt{text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:24px 22px 20px;box-shadow:var(--shadow);margin-top:6px;position:relative}
+.ltxt::before{content:'“';position:absolute;top:-6px;left:18px;font-family:'Cormorant Garamond',serif;font-size:80px;line-height:1;color:var(--gold-soft)}
+.ltxt p{font-size:16px;color:var(--cocoa);margin-bottom:12px;line-height:1.6}
+.ltxt p.hi{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--ink);margin-top:14px}
+.ltxt strong{color:var(--ink)}
+.sig{font-family:'Caveat',cursive;font-size:40px;line-height:1;color:var(--rose);margin-top:6px}
+.sig-sub{font-size:12.5px;color:var(--cocoa);font-weight:600}
+.note .btn{margin-top:28px}
+
+footer{margin-top:48px;text-align:center;font-size:12px;color:var(--cocoa);opacity:.85}
+footer em{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--gold-ink);display:block;margin-bottom:4px}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.on{opacity:1;transform:none}
+/* print ampliado */
+.pi img{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(35,25,23,.9);display:flex;align-items:center;justify-content:center;padding:24px 16px;opacity:0;pointer-events:none;transition:opacity .25s}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-width:100%;max-height:86vh;width:auto;height:auto;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top));right:14px;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:20px;cursor:pointer}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}}
+</style>
+<noscript><style>.content[hidden]{display:block}.gate{display:none}.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+<main class="page">
+  <header class="brand"><i></i><span>Protocolo da Inversão Feminina</span><i></i></header>
+
+  <!-- PORTÃO: envelope -->
+  <section class="gate" id="gate">
+    <p class="eyebrow">Diagnóstico pronto</p>
+    <h1 id="gateTitle">Seu diagnóstico <em>chegou.</em></h1>
+    <p class="sub">Respira. O que você vai ler agora não é um julgamento. <strong>É um mapa.</strong></p>
+    <div class="env-stage">
+      <button class="env" id="env" type="button" aria-label="Abrir meu diagnóstico">
+        <span class="shadow"></span>
+        <span class="back"></span>
+        <span class="letter"><span class="lt">diagnóstico</span><span class="to" id="envTo">pra você</span><span class="ln"></span><span class="ln s"></span></span>
+        <span class="pocket"></span>
+        <span class="flap"></span>
+        <span class="seal"><span>E</span></span>
+      </button>
+    </div>
+    <button class="btn" id="openBtn" type="button">Abrir meu diagnóstico<span class="arr" aria-hidden="true">💌</span></button>
+    <span class="hand tapnote">ou toca no envelope</span>
+  </section>
+
+  <!-- CONTEÚDO -->
+  <div class="content" id="content" hidden>
+
+    <section class="card result" id="resultCard">
+      <p class="hello" id="hello">Seu padrão principal é…</p>
+      <h1 class="pname" id="pName"></h1>
+      <p class="pline" id="pLine"></p>
+      <p class="pdesc" id="pDesc"></p>
+      <div class="meter">
+        <div class="mtop"><span>Nível de ativação</span><strong id="mVal"></strong></div>
+        <div class="d10" id="d10"></div>
+      </div>
+      <div class="bars" id="bars"></div>
+      <p class="fine">Calculado a partir das suas respostas.</p>
+    </section>
+
+    <section class="card nodata" id="noData" hidden>
+      <p class="eyebrow">Hmm…</p>
+      <h2 class="h">Ainda não encontrei <em>suas respostas.</em></h2>
+      <p>Pra eu te mostrar o seu padrão, preciso que você faça o diagnóstico rapidinho (2 minutos).</p>
+      <a class="btn" href="quiz1.html" data-next>Fazer meu diagnóstico<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </section>
+
+    <section class="sec reveal" id="signsSec">
+      <p class="eyebrow">Aposto que você já…</p>
+      <div class="signs" id="signs"></div>
+      <div class="signs-out"><span class="hand" id="signsOut">toca no coração se foi você 🤍</span></div>
+    </section>
+
+    <section class="sec reveal">
+      <p class="eyebrow">Por que isso acontece</p>
+      <h2 class="h">O ciclo da <em>ordem invertida.</em></h2>
+      <p class="sub">Não é falta de amor. É uma sequência — e ela se repete até alguém interromper.</p>
+      <div class="cycle" id="cycle">
+        <svg viewBox="0 0 300 300" aria-hidden="true">
+          <defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E4CFA8"/><stop offset="1" stop-color="#A6506A"/></linearGradient></defs>
+          <circle class="ring" cx="150" cy="150" r="112"/>
+          <g class="orbit"><circle class="spark-g" cx="150" cy="38" r="11"/><circle class="spark" cx="150" cy="38" r="5"/></g>
+        </svg>
+        <button class="node n0 on" type="button" data-i="0" aria-label="Etapa 1">1</button>
+        <button class="node n1" type="button" data-i="1" aria-label="Etapa 2">2</button>
+        <button class="node n2" type="button" data-i="2" aria-label="Etapa 3">3</button>
+        <button class="node n3" type="button" data-i="3" aria-label="Etapa 4">4</button>
+        <div class="center"><small>ordem invertida</small><em id="cCenter">você entrega</em></div>
+      </div>
+      <div class="cstep" aria-live="polite"><span class="cn" id="cNum">01</span><div class="ct" id="cTxt"><strong></strong><p></p></div></div>
+    </section>
+
+    <section class="sec reveal">
+      <div class="turn">
+        <p class="eyebrow light">Agora, a parte boa</p>
+        <h2>Padrão não é personalidade.<br><em>É costume.</em></h2>
+        <p>E costume se desaprende.</p>
+        <p class="big">Você não precisa amar menos. Só precisa <strong>parar de entregar antes da hora.</strong></p>
+        <div class="change" id="changeBox"><span>Pra você, isso significa:</span><p id="pChange"></p></div>
+      </div>
+    </section>
+
+    <section class="sec reveal">
+      <p class="eyebrow">Prints reais de alunas</p>
+      <h2 class="h">Elas também estavam <em>nesse ciclo.</em></h2>
+      <p class="sub">Arrasta pro lado → e toca pra ampliar</p>
+      <div class="proof" id="proof">
+        <figure class="pi"><figcaption class="cap">5 dias sem falar. Aí ele mandou: "sumida" 👀</figcaption><img src="src/img/print1.jpeg" alt="Print de aluna: depois de 5 dias sem comunicação, ele mandou mensagem perguntando se ela estava brava" width="888" height="832" loading="lazy"></figure>
+        <figure class="pi"><figcaption class="cap">"Ele simplesmente perguntou onde íamos passar o ano novo"</figcaption><img src="src/img/print2.jpeg" alt="Print de aluna contando que ele perguntou onde iam passar o ano novo" width="833" height="741" loading="lazy"></figure>
+        <figure class="pi"><figcaption class="cap">"…vai chegar com saudade minha" 🤍</figcaption><img src="src/img/print4.jpeg" alt="Print de aluna: ele perguntou a que horas ela chega e disse que vai chegar com saudade" width="962" height="423" loading="lazy"></figure>
+      </div>
+      <div class="pdots" id="pdots"><i class="on"></i><i></i><i></i></div>
+    </section>
+
+    <section class="sec note reveal">
+      <div class="arch"><img src="src/img/Ensaio%20de%20fotos%20advogada_.jpg" onerror="this.onerror=null;this.src='src/img/Ensaio_de_fotos_advogada_.jpg'" alt="Elisa Koscziol" width="170" height="220" loading="lazy"></div>
+      <p class="eyebrow">Um recado pra você</p>
+      <div class="ltxt">
+        <p class="hi" id="hiName">Oi, você.</p>
+        <p>Ler o seu diagnóstico pode ter doído um pouquinho. Faz parte.</p>
+        <p>Mas repara: tudo o que você leu aqui é sobre <strong>a ordem</strong> — não sobre o seu valor.</p>
+        <p>Você não precisa virar outra mulher. <strong>Só precisa voltar pro seu lugar.</strong></p>
+        <p>E eu organizei o caminho inteiro pra isso.</p>
+        <p class="sig">Elisa</p>
+        <p class="sig-sub">Elisa Koscziol · criadora do Protocolo da Inversão Feminina</p>
+      </div>
+      <a class="btn" href="mulherhipnotica.html" data-next>Quero sair desse padrão<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <p class="btn-sub">Te mostro o caminho na próxima página</p>
+    </section>
+
+    <footer><em>Protocolo da Inversão Feminina</em>por Elisa Koscziol · © 2026</footer>
+  </div>
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Print ampliado"><img src="" alt=""><button type="button" aria-label="Fechar">✕</button></div>
+<script>
+(function(){
+  'use strict';
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}}};
+  function withQS(href){
+    if(!location.search) return href;
+    try{var u=new URL(href,location.href);new URLSearchParams(location.search).forEach(function(v,k){if(!u.searchParams.has(k))u.searchParams.set(k,v)});return u.href}catch(e){return href}
+  }
+  document.querySelectorAll('a[data-next]').forEach(function(a){a.href=withQS(a.getAttribute('href'))});
+  function $(id){return document.getElementById(id)}
+
+  var PAT={
+    E:{name:'Entrega Antecipada',line:'Você entrega o coração antes dele escolher você.',
+      desc:'Você é intensa, presente, generosa. Quando gosta, mostra. O problema não é o quanto você ama — é o momento. Você oferece atenção, carinho e disponibilidade antes dele ter se movido. E quando alguém recebe tudo sem precisar conquistar… a vontade de conquistar simplesmente não nasce.',
+      signs:['Responder na hora, mesmo quando ele levou horas pra te responder','Fazer planos pensando nele antes dele te convidar pra qualquer coisa','Sentir que é sempre você quem dá o primeiro passo — e o segundo, e o terceiro'],
+      change:'Aprender a deixar espaço pra ele se mover — sem esfriar, sem joguinho e sem deixar de ser carinhosa.'},
+    P:{name:'Plantão Emocional',line:'Sua paz depende da próxima mensagem dele.',
+      desc:'Seu humor sobe e desce com o celular. Se ele responde, o dia fica leve. Se demora, tudo pesa. Sem perceber, você entregou a chave da sua tranquilidade pra ele — e ele sente isso, mesmo sem saber explicar.',
+      signs:['Desbloquear o celular sem ter chegado notificação nenhuma','Ver que ele ficou online e não te respondeu — e isso estragar o seu dia','Escrever a mensagem perfeita… e apagar tudo'],
+      change:'Recuperar o controle do seu próprio estado emocional — mesmo gostando muito dele.'},
+    L:{name:'Laço Aberto',line:'Terminou lá fora. Aqui dentro, ainda não.',
+      desc:'A história acabou, mas o vínculo continua aberto: você revisita conversas, imagina reencontros, se pergunta o que poderia ter feito diferente. Esse laço aberto consome a sua energia e te impede de ocupar o lugar de quem é escolhida.',
+      signs:['Olhar os stories dele (ou ter vontade e se segurar)','Reler conversas antigas "só pra lembrar"','Pensar "e se eu tivesse feito diferente…" antes de dormir'],
+      change:'Fechar o que precisa ser fechado — e decidir, de cabeça fria, o que você quer daqui pra frente.'},
+    R:{name:'Roteiro Repetido',line:'Muda o rosto. O final é sempre o mesmo.',
+      desc:'Começa intenso, ele se encanta, você se entrega… e em algum momento ele esfria. Outro nome, outra cidade, outra história — mas o mesmo roteiro. Não é azar e não é dedo podre: é um padrão que se repete sem você ver. E o que se repete pode ser reescrito.',
+      signs:['Pensar "de novo isso?" no meio de uma relação','Ouvir das amigas que você "sempre escolhe o mesmo tipo"','Sentir que no começo você é tudo — e depois vira opção'],
+      change:'Enxergar o roteiro já na primeira cena — e escrever um final diferente.'}
+  };
+
+  var name=store.get('pif_name')||'';
+  var res=null;try{res=JSON.parse(store.get('pif_result')||'null')}catch(e){}
+  if(res&&!PAT[res.top])res=null;
+
+  if(name){
+    $('gateTitle').innerHTML='';$('gateTitle').append(name+', seu diagnóstico ');
+    var em=document.createElement('em');em.textContent='chegou.';$('gateTitle').append(em);
+    $('envTo').textContent='pra '+name;$('hiName').textContent='Oi, '+name+'.';
+    $('hello').textContent=name+', seu padrão principal é…';
+  }
+
+  function fillResult(){
+    var p=PAT[res.top];
+    $('pName').textContent=p.name;$('pLine').textContent=p.line;$('pDesc').textContent=p.desc;$('pChange').textContent=p.change;
+    var v=Math.max(0,Math.min(10,+res.intensity||0));
+    var lbl=v<=3?'leve':v<=6?'moderado':v<=8?'alto':'muito alto';
+    $('mVal').textContent=v+'/10 · '+lbl;
+    var d=$('d10');for(var i=0;i<10;i++){var s=document.createElement('i');d.appendChild(s)}
+    var order=(res.order&&res.order.length===4)?res.order:Object.keys(res.pct).sort(function(a,b){return res.pct[b]-res.pct[a]});
+    var bars=$('bars');
+    order.forEach(function(k,ix){
+      var row=document.createElement('div');row.className='brow'+(ix===0?' top':'');
+      row.innerHTML='<div class="bl"><span></span><b></b></div><div class="track"><span></span></div>';
+      row.querySelector('.bl span').textContent=PAT[k].name;row.querySelector('.bl b').textContent=(res.pct[k]||0)+'%';
+      row.dataset.w=(res.pct[k]||0);bars.appendChild(row);
+    });
+    var sg=$('signs');
+    p.signs.forEach(function(t){
+      var b=document.createElement('button');b.type='button';b.className='sign';b.setAttribute('aria-pressed','false');
+      b.innerHTML='<span class="hrt"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-8.6-8.6C2.2 8 4.3 5 7.4 5c1.9 0 3.4 1.1 4.6 2.6C13.2 6.1 14.7 5 16.6 5c3.1 0 5.2 3 4 6.4C19 15.6 12 20 12 20z"/></svg></span><span class="st"></span>';
+      b.querySelector('.st').textContent=t;
+      b.addEventListener('click',function(){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');countSigns()});
+      sg.appendChild(b);
+    });
+  }
+  function countSigns(){
+    var n=document.querySelectorAll('.sign[aria-pressed="true"]').length;
+    $('signsOut').textContent=n===0?'toca no coração se foi você 🤍':n===1?'uma já é o suficiente pra cansar, né?':n===2?'duas de três. eu sabia 🤍':'as três. você não tá sozinha nisso.';
+  }
+  function animateResult(){
+    var v=+res.intensity||0;
+    document.querySelectorAll('#d10 i').forEach(function(s,i){setTimeout(function(){if(i<v)s.classList.add('f')},reduce?0:300+i*90)});
+    document.querySelectorAll('.brow').forEach(function(r,i){setTimeout(function(){r.querySelector('.track span').style.width=r.dataset.w+'%'},reduce?0:500+i*160)});
+  }
+
+  if(res){fillResult()}else{
+    $('resultCard').hidden=true;$('noData').hidden=false;$('signsSec').hidden=true;$('changeBox').hidden=true;
+  }
+
+  /* envelope */
+  var opened=false,env=$('env');
+  function open(){
+    if(opened)return;opened=true;env.classList.add('open');$('gate').classList.add('opening');$('openBtn').disabled=true;
+    var t1=reduce?0:1500,t2=reduce?0:1950;
+    setTimeout(function(){$('gate').classList.add('bye')},t1);
+    setTimeout(function(){$('gate').hidden=true;$('content').hidden=false;window.scrollTo(0,0);if(res)setTimeout(animateResult,150);observe()},t2);
+  }
+  env.addEventListener('click',open);$('openBtn').addEventListener('click',open);
+
+  /* ciclo */
+  var CY=[
+    {c:'você entrega',t:'Você se encanta e entrega',d:'Atenção, carinho, disponibilidade, presença. Tudo antes dele se posicionar.'},
+    {c:'ele recebe',t:'Ele recebe sem precisar se mover',d:'Ninguém corre atrás do que já tem garantido. Não é maldade — é conforto.'},
+    {c:'ele esfria',t:'A vontade dele esfria',d:'Sem espaço pra se mover, ele não sente urgência de te escolher. E se afasta um pouquinho.'},
+    {c:'você entrega mais',t:'Você sente… e entrega mais',d:'Pra tentar recuperar o que sentiu escapar. E o ciclo recomeça — cada volta, um pouco mais fundo.'}
+  ];
+  var ci=0,auto=null,pausedUntil=0,nodes=document.querySelectorAll('.node');
+  function setStep(i){
+    ci=i;nodes.forEach(function(n,j){n.classList.toggle('on',j===i)});
+    var ct=$('cTxt'),cc=$('cCenter');ct.style.opacity=0;cc.style.opacity=0;
+    setTimeout(function(){
+      $('cNum').textContent='0'+(i+1);ct.querySelector('strong').textContent=CY[i].t;ct.querySelector('p').textContent=CY[i].d;cc.textContent=CY[i].c;
+      ct.style.opacity=1;cc.style.opacity=1;
+    },reduce?0:180);
+  }
+  setStep(0);
+  nodes.forEach(function(n){n.addEventListener('click',function(){pausedUntil=Date.now()+9000;setStep(+n.dataset.i)})});
+  /* o ciclo começa a girar quando ela chega nele */
+  function startCycle(){
+    if(auto)return;setStep(0);$('cycle').classList.add('run');
+    auto=setInterval(function(){if(Date.now()<pausedUntil)return;setStep((ci+1)%4)},2600);
+  }
+  if('IntersectionObserver' in window){
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){startCycle();cio.disconnect()}})},{threshold:.4});
+    cio.observe($('cycle'));
+  }else{startCycle()}
+
+  /* tocar no print abre ampliado */
+  var lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
+  document.querySelectorAll('.pi img').forEach(function(im){im.addEventListener('click',function(){lbImg.src=im.currentSrc||im.src;lbImg.alt=im.alt;lb.classList.add('on')})});
+  lb.addEventListener('click',function(){lb.classList.remove('on')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+
+  /* carrossel */
+  var pr=$('proof'),dots=document.querySelectorAll('#pdots i');
+  pr.addEventListener('scroll',function(){
+    var it=pr.querySelector('.pi');if(!it)return;
+    var w=it.getBoundingClientRect().width+12,i=Math.round(pr.scrollLeft/w);
+    dots.forEach(function(d,j){d.classList.toggle('on',j===i)});
+  },{passive:true});
+
+  function observe(){
+    var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12}):null;
+    document.querySelectorAll('.reveal').forEach(function(n){io?io.observe(n):n.classList.add('on')});
+  }
+})();
+</script>
+</body>
+</html>
