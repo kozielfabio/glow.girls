@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Protocolo da Inversão Feminina · Elisa Koscziol</title>
+<meta name="description" content="O método de mulher pra mulher pra você sair do lugar de quem espera e voltar pro lugar de quem é escolhida.">
+<meta name="theme-color" content="#FBF7F3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="src/img/44ef7d98-adeb-4867-b3d9-ebe6cd9cedee.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --cream:#FBF7F3;--paper:#FFFDFB;--sand:#F3EAE2;--blush:#F7E6E3;--blush-2:#EFD3D0;
+  --rose:#A6506A;--rose-2:#C2708A;--rose-deep:#8E3D57;--rose-light:#EBA9B9;
+  --gold:#B8925A;--gold-ink:#8A6A3B;--gold-soft:#E4CFA8;--gold-bright:#E9C987;
+  --ink:#2A1E1B;--cocoa:#6B5650;--line:#EADDD3;--espresso:#231917;--espresso-2:#2F2320;
+  --shadow:0 22px 50px -26px rgba(110,60,50,.4);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--cream);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+button{font-family:inherit}
+.wrap{max-width:480px;margin:0 auto;padding:0 20px;position:relative}
+section{position:relative}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:18px;height:1px;background:var(--gold)}
+.eyebrow.c{justify-content:center}
+.eyebrow.light{color:var(--gold-soft)}
+.eyebrow.light::before{background:var(--gold-soft)}
+.h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(34px,9.2vw,44px);line-height:1.02;letter-spacing:-.012em;margin-bottom:14px}
+.h2 em{font-style:italic;color:var(--rose)}
+.sub{font-size:16.5px;color:var(--cocoa);line-height:1.6}
+.sub strong{color:var(--ink)}
+.hand{font-family:'Caveat',cursive;font-size:25px;line-height:1.15;color:var(--rose);display:inline-block;transform:rotate(-1.8deg)}
+.pad{padding:68px 0}
+
+/* faixa topo */
+.topbar{background:var(--espresso);color:#F6EDE6;text-align:center;font-size:12.5px;font-weight:600;padding:10px 16px;letter-spacing:.01em}
+.topbar b{color:var(--gold-bright);font-weight:700}
+
+/* botão */
+.btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:20px 22px;border-radius:99px;border:0;cursor:pointer;background:linear-gradient(135deg,#BE6C84 0%,var(--rose) 55%,var(--rose-deep) 100%);color:#fff;font-weight:800;font-size:16.5px;letter-spacing:.01em;text-decoration:none;text-align:center;line-height:1.25;box-shadow:0 18px 32px -16px rgba(142,61,87,.85),inset 0 1px 0 rgba(255,255,255,.25);overflow:hidden;transition:transform .15s}
+.btn::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.3) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.6s 1s infinite}
+@keyframes shine{0%{transform:translateX(-120%)}35%,100%{transform:translateX(120%)}}
+.btn:active{transform:scale(.98)}
+.btn .arr{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;flex-shrink:0}
+.btn-sub{text-align:center;font-size:13px;color:var(--cocoa);margin-top:12px;font-weight:600}
+.btn-sub b{color:var(--ink)}
+.trust{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 16px;margin-top:14px;font-size:12px;color:var(--cocoa);font-weight:600}
+.trust span{display:inline-flex;align-items:center;gap:6px}
+.trust svg{color:var(--gold)}
+
+/* HERO */
+.hero{padding:30px 0 56px;overflow:hidden;text-align:center;background:
+  radial-gradient(70% 40% at 0% 0%, rgba(239,211,208,.9), transparent 70%),
+  radial-gradient(60% 38% at 100% 30%, rgba(228,207,168,.55), transparent 70%),
+  radial-gradient(80% 40% at 50% 100%, rgba(247,230,227,.95), transparent 70%)}
+.pill{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:99px;background:rgba(255,253,251,.85);border:1px solid var(--line);font-size:12.5px;font-weight:700;color:var(--cocoa);box-shadow:0 6px 18px -10px rgba(110,60,50,.35)}
+.pill b{width:7px;height:7px;border-radius:50%;background:var(--rose-2);box-shadow:0 0 0 4px rgba(194,112,138,.18)}
+.pill strong{color:var(--rose)}
+.hero .hand{margin-top:16px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(42px,11.6vw,58px);line-height:.98;letter-spacing:-.018em;margin:8px 0 14px}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero .sub{max-width:370px;margin:0 auto}
+.nojogo{margin-top:12px;font-size:14px;font-weight:800;color:var(--ink);letter-spacing:.01em}
+.nojogo span{color:var(--gold)}
+.cover-wrap{position:relative;width:min(240px,62vw);margin:34px auto 30px}
+.cover-wrap::before{content:'';position:absolute;inset:-18% -30%;background:radial-gradient(closest-side,rgba(233,201,135,.5),transparent 70%);z-index:0}
+.cover{position:relative;z-index:1;border-radius:14px;box-shadow:0 34px 50px -24px rgba(60,30,25,.6),0 0 0 1px rgba(184,146,90,.25);transform:rotate(-2deg);animation:hov 5s ease-in-out infinite}
+@keyframes hov{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-1deg) translateY(-8px)}}
+.badge{position:absolute;z-index:2;background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:8px 12px;font-size:12px;font-weight:800;white-space:nowrap;box-shadow:0 12px 22px -14px rgba(110,60,50,.7);display:flex;align-items:center;gap:6px;color:var(--ink)}
+.badge i{font-style:normal;color:var(--rose)}
+.b1{left:-34%;top:16%;animation:bob 4s ease-in-out infinite}
+.b2{right:-34%;top:44%;animation:bob 4.6s .4s ease-in-out infinite}
+.b3{left:-24%;bottom:8%;animation:bob 4.2s .8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* diagnóstico pessoal */
+.mydiag{margin-top:26px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:18px 18px;display:flex;gap:14px;align-items:flex-start;box-shadow:var(--shadow)}
+.mydiag[hidden]{display:none}
+.mydiag .ic{width:44px;height:44px;border-radius:14px;background:var(--blush);display:grid;place-items:center;font-size:20px;flex-shrink:0}
+.mydiag small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);font-weight:800}
+.mydiag strong{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:25px;line-height:1.1;color:var(--rose);margin:2px 0 4px}
+.mydiag p{font-size:14px;color:var(--cocoa);line-height:1.5}
+
+/* checklist */
+.checks{display:flex;flex-direction:column;gap:9px;margin-top:22px}
+.ck{display:flex;align-items:center;gap:13px;width:100%;text-align:left;background:var(--paper);border:1.5px solid var(--line);border-radius:18px;padding:15px 15px;font-size:15.5px;font-weight:600;line-height:1.4;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s,transform .12s}
+.ck:active{transform:scale(.985)}
+.ck .box{width:24px;height:24px;border-radius:8px;border:1.5px solid var(--blush-2);flex-shrink:0;display:grid;place-items:center;transition:all .2s;background:#fff}
+.ck .box svg{opacity:0;transform:scale(.4);transition:all .25s cubic-bezier(.3,1.6,.5,1)}
+.ck[aria-pressed="true"]{border-color:var(--rose-2);background:linear-gradient(135deg,#FFF8F7,#FBEDEB)}
+.ck[aria-pressed="true"] .box{background:var(--rose);border-color:var(--rose)}
+.ck[aria-pressed="true"] .box svg{opacity:1;transform:none}
+.ck-out{margin-top:18px;text-align:center;background:var(--blush);border-radius:18px;padding:14px 16px;font-size:15px;font-weight:700;color:var(--rose-deep);transition:background .3s}
+.ck-out .n{font-family:'Cormorant Garamond',serif;font-size:28px;font-style:italic;line-height:1;vertical-align:-3px;margin-right:4px}
+
+/* verdade (escuro) */
+.dark{background:var(--espresso);color:#F6EDE6;overflow:hidden}
+.dark::before{content:'';position:absolute;width:420px;height:420px;right:-180px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(194,112,138,.32),transparent 70%)}
+.dark::after{content:'';position:absolute;width:380px;height:380px;left:-200px;bottom:-140px;border-radius:50%;background:radial-gradient(circle,rgba(233,201,135,.16),transparent 70%)}
+.dark .wrap{z-index:1}
+.dark .h2{color:#fff}
+.dark .h2 em{color:var(--rose-light)}
+.dark p{color:rgba(246,237,230,.84);font-size:16.5px;line-height:1.65;margin-bottom:14px}
+.dark p strong{color:#fff}
+.quote{margin:26px 0;padding:22px 20px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid rgba(228,207,168,.22);font-family:'Cormorant Garamond',serif;font-size:25px;font-style:italic;line-height:1.22;color:#fff}
+.quote strong{color:var(--gold-bright);font-weight:600}
+
+/* antes/depois */
+.demo{margin-top:30px}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:99px;padding:5px;position:relative}
+.seg button{position:relative;z-index:1;border:0;background:none;color:rgba(246,237,230,.75);font-size:14px;font-weight:800;padding:11px 8px;border-radius:99px;cursor:pointer;transition:color .3s}
+.seg button[aria-selected="true"]{color:var(--espresso)}
+.seg .knob{position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:99px;background:linear-gradient(135deg,#F4E2C0,var(--gold-bright));transition:transform .45s cubic-bezier(.3,1.3,.5,1);box-shadow:0 8px 16px -8px rgba(0,0,0,.5)}
+.seg.after .knob{transform:translateX(100%)}
+.phone{margin:22px auto 0;width:min(320px,88%);background:#F5EEE9;border-radius:34px;padding:10px;box-shadow:0 40px 60px -30px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.08)}
+.screen{background:#EFE5DD;border-radius:26px;overflow:hidden;height:372px;display:flex;flex-direction:column}
+.ph-head{background:#fff;padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #EADDD3}
+.ph-head .av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#D9C2B3,#BFA394);display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px}
+.ph-head strong{display:block;font-size:14px;color:var(--ink);line-height:1.2}
+.ph-head span{font-size:11.5px;color:var(--cocoa)}
+.ph-body{flex:1;padding:14px 12px;display:flex;flex-direction:column;gap:7px;justify-content:flex-end}
+.bb{max-width:80%;padding:9px 12px 7px;border-radius:16px;font-size:14px;line-height:1.35;color:var(--ink);opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s}
+.bb.in{opacity:1;transform:none}
+.bb small{display:block;text-align:right;font-size:10px;color:rgba(42,30,27,.5);margin-top:2px}
+.bb.me{align-self:flex-end;background:#F3D6DC;border-bottom-right-radius:5px}
+.bb.him{align-self:flex-start;background:#fff;border-bottom-left-radius:5px}
+.seen{align-self:flex-end;font-size:11px;color:var(--cocoa);margin-top:2px;opacity:0;transition:opacity .4s}
+.seen.in{opacity:1}
+.demo-cap{text-align:center;margin-top:16px}
+.demo-cap .hand{color:var(--rose-light);font-size:22px}
+
+/* método */
+.steps{margin-top:26px;position:relative}
+.steps::before{content:'';position:absolute;left:27px;top:30px;bottom:30px;width:1px;background:linear-gradient(var(--gold-soft),var(--blush-2))}
+.st{display:flex;gap:16px;padding:14px 0;position:relative}
+.st .num{width:56px;height:56px;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:24px;color:var(--rose);flex-shrink:0;box-shadow:0 10px 20px -14px rgba(110,60,50,.6)}
+.st strong{display:block;font-size:17px;line-height:1.3;margin:6px 0 4px}
+.st p{font-size:15px;color:var(--cocoa);line-height:1.55}
+
+/* prova */
+.proofsec{background:linear-gradient(180deg,var(--blush) 0%,var(--cream) 100%)}
+.proof{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:22px -20px 0;padding:6px 20px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.proof::-webkit-scrollbar{display:none}
+.pi{flex:0 0 84%;scroll-snap-align:center;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:14px;box-shadow:0 16px 30px -24px rgba(110,60,50,.7);align-self:flex-start}
+.pi .cap{font-family:'Caveat',cursive;font-size:23px;line-height:1.15;color:var(--rose-deep);margin:0 4px 10px}
+.pi img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.pi.tall .clip{display:block;position:relative;max-height:390px;overflow:hidden;border-radius:14px}
+.pi.tall .clip::after{content:'toca pra ler inteiro ↓';position:absolute;left:0;right:0;bottom:0;height:110px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px;background:linear-gradient(rgba(255,253,251,0),#FFFDFB 72%);font-size:13px;font-weight:800;color:var(--rose);pointer-events:none}
+.pdots{display:flex;justify-content:center;gap:7px;margin-top:4px}
+.pdots i{width:7px;height:7px;border-radius:99px;background:var(--blush-2);transition:all .3s}
+.pdots i.on{width:24px;background:var(--rose)}
+
+/* entregáveis */
+.items{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+.it{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:16px 16px;box-shadow:0 12px 24px -22px rgba(110,60,50,.7)}
+.it .ic{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,#FBF1E3,#F4E3CB);display:grid;place-items:center;color:var(--gold-ink);flex-shrink:0}
+.it .tg{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--rose);background:var(--blush);border-radius:99px;padding:2px 9px;margin-bottom:5px}
+.it strong{display:block;font-size:16px;line-height:1.3;margin-bottom:3px}
+.it p{font-size:14.5px;color:var(--cocoa);line-height:1.5}
+.it.main{border-color:var(--gold-soft);background:linear-gradient(135deg,#FFFDFB,#FBF3E8)}
+
+/* carta */
+.letter-sec{background:var(--sand)}
+.arch{width:190px;height:250px;margin:0 auto 24px;position:relative}
+.arch::before{content:'';position:absolute;inset:-9px -9px -9px 9px;border:1.5px solid var(--gold);border-radius:110px 110px 20px 20px;opacity:.6}
+.arch img{position:relative;width:100%;height:100%;object-fit:cover;object-position:50% 14%;border-radius:110px 110px 20px 20px;box-shadow:0 28px 44px -22px rgba(60,30,25,.6)}
+.ltxt{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:28px 22px 22px;box-shadow:var(--shadow);position:relative}
+.ltxt::before{content:'“';position:absolute;top:-8px;left:18px;font-family:'Cormorant Garamond',serif;font-size:84px;line-height:1;color:var(--gold-soft)}
+.ltxt p{font-size:16.5px;color:var(--cocoa);margin-bottom:13px;line-height:1.6}
+.ltxt p.hi{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--ink);margin-top:10px}
+.ltxt p.em{font-family:'Cormorant Garamond',serif;font-size:23px;font-style:italic;color:var(--ink);line-height:1.25}
+.ltxt strong{color:var(--ink)}
+.sig{font-family:'Caveat',cursive;font-size:44px;line-height:1;color:var(--rose);margin-top:4px}
+.sig-sub{font-size:12.5px;color:var(--cocoa);font-weight:600}
+
+/* pra quem */
+.fit{display:grid;gap:12px;margin-top:22px}
+.fit-box{border-radius:22px;padding:20px 18px;border:1px solid var(--line);background:var(--paper)}
+.fit-box h3{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;margin-bottom:10px;line-height:1.1}
+.fit-box ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fit-box li{display:flex;gap:10px;font-size:15px;line-height:1.45;color:var(--ink)}
+.fit-box li i{font-style:normal;flex-shrink:0;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;margin-top:1px}
+.fit-yes{border-color:var(--blush-2);background:linear-gradient(135deg,#FFFDFB,#FBEFED)}
+.fit-yes li i{background:var(--rose);color:#fff}
+.fit-no li i{background:var(--sand);color:var(--cocoa)}
+.fit-no li{color:var(--cocoa)}
+.care{margin-top:4px;font-size:14px;line-height:1.55;color:var(--cocoa);background:var(--cream);border:1px dashed var(--blush-2);border-radius:16px;padding:12px 14px}
+.care strong{color:var(--rose-deep)}
+
+/* oferta */
+.offer{background:var(--espresso);color:#F6EDE6;overflow:hidden}
+.offer::before{content:'';position:absolute;width:520px;height:520px;left:50%;top:-260px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(233,201,135,.2),transparent 70%)}
+.offer .wrap{z-index:1}
+.offer .h2{color:#fff;text-align:center}
+.offer .h2 em{color:var(--rose-light)}
+.offer .lead{text-align:center;color:rgba(246,237,230,.8);font-size:16px}
+.ocard{margin-top:26px;background:linear-gradient(180deg,var(--espresso-2),#281D1A);border:1px solid rgba(228,207,168,.28);border-radius:30px;padding:26px 20px 24px;box-shadow:0 40px 70px -40px rgba(0,0,0,.8)}
+.ocard .mini{width:120px;margin:-6px auto 18px;border-radius:10px;box-shadow:0 20px 34px -16px rgba(0,0,0,.8);transform:rotate(-2deg)}
+.olist{list-style:none;display:flex;flex-direction:column;gap:10px}
+.olist li{display:flex;gap:11px;font-size:15px;line-height:1.4;color:rgba(246,237,230,.92)}
+.olist li i{flex-shrink:0;width:21px;height:21px;border-radius:50%;background:rgba(233,201,135,.16);color:var(--gold-bright);display:grid;place-items:center;margin-top:1px}
+.olist li b{color:#fff;font-weight:700}
+.price{text-align:center;margin-top:26px;padding-top:22px;border-top:1px solid rgba(228,207,168,.2)}
+.price small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:800;margin-bottom:8px}
+.pv{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--gold-bright);line-height:.9;display:inline-flex;align-items:flex-start;gap:4px}
+.pv .c{font-size:26px;margin-top:10px}
+.pv .v{font-size:88px;letter-spacing:-.02em}
+.pv .d{font-size:36px;margin-top:8px}
+.price p{font-size:13.5px;color:rgba(246,237,230,.72);margin-top:10px;font-weight:600}
+.price p b{color:#fff}
+.ocard .btn{margin-top:22px}
+.secure{text-align:center;font-size:12.5px;color:rgba(246,237,230,.6);margin-top:12px;font-weight:600}
+.gtee{margin-top:22px;display:flex;align-items:center;gap:16px;background:rgba(233,201,135,.08);border:1px solid rgba(233,201,135,.25);border-radius:24px;padding:18px 18px}
+.gtee img{width:84px;height:84px;flex-shrink:0}
+.gtee h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#fff;line-height:1.1;margin-bottom:6px}
+.gtee p{font-size:14px;color:rgba(246,237,230,.78);line-height:1.5}
+
+/* FAQ */
+.faq{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:0 18px;transition:border-color .2s}
+.faq details[open]{border-color:var(--blush-2)}
+.faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px;cursor:pointer;padding:17px 0;font-size:15.5px;font-weight:700;line-height:1.35}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--blush);color:var(--rose);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:16px;transition:transform .3s}
+.faq details[open] summary i{transform:rotate(45deg)}
+.faq details p{font-size:15px;color:var(--cocoa);line-height:1.6;padding:0 0 18px}
+
+/* final */
+.final{text-align:center;padding:72px 0 64px;background:
+  radial-gradient(80% 40% at 50% 45%, rgba(239,211,208,.7), transparent 72%)}
+.final .lines p{font-family:'Cormorant Garamond',serif;font-size:26px;line-height:1.2;color:var(--cocoa);font-style:italic}
+.final .q{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(34px,9.4vw,44px);line-height:1.03;margin:20px 0 28px}
+.final .q em{font-style:italic;color:var(--rose)}
+
+footer{background:var(--espresso);color:rgba(246,237,230,.6);text-align:center;padding:30px 20px calc(110px + env(safe-area-inset-bottom));font-size:12px;line-height:1.6}
+footer em{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-soft);display:block;margin-bottom:4px}
+
+/* CTA fixo */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(251,247,243,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.sticky.show{transform:none}
+.sticky-in{max-width:480px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.sticky .pr{line-height:1.15}
+.sticky .pr strong{display:block;font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--ink)}
+.sticky .pr span{font-size:11.5px;color:var(--cocoa);font-weight:600;white-space:nowrap}
+.sticky .btn{padding:15px 16px;font-size:15px;flex:1}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.on{opacity:1;transform:none}
+@media (max-width:370px){.b1,.b3{left:-22%}.b2{right:-22%}.badge{font-size:11px;padding:7px 10px}}
+/* print ampliado */
+.pi img{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(35,25,23,.9);display:flex;align-items:center;justify-content:center;padding:24px 16px;opacity:0;pointer-events:none;transition:opacity .25s}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-width:100%;max-height:86vh;width:auto;height:auto;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top));right:14px;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:20px;cursor:pointer}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}}
+</style>
+<noscript><style>.reveal{opacity:1;transform:none}.bb,.seen{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<div class="topbar">🤍 Acesso imediato no seu e-mail · <b>Garantia de 30 dias</b></div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="pill" id="heroPill"><b></b>Protocolo da Inversão Feminina</div>
+    <br><span class="hand" id="heroHand">isso aqui é pra você 🤍</span>
+    <h1>Chega de ser a que <em>sempre corre atrás.</em></h1>
+    <p class="sub">O método de mulher pra mulher pra você sair do lugar de quem espera — e voltar pro lugar de <strong>quem é escolhida.</strong></p>
+    <p class="nojogo">Sem joguinho <span>·</span> Sem se diminuir <span>·</span> Sem deixar de ser você</p>
+
+    <div class="cover-wrap">
+      <img class="cover" src="src/img/44ef7d98-adeb-4867-b3d9-ebe6cd9cedee.png" alt="Capa do Protocolo da Inversão Feminina com Elisa Koscziol" width="1024" height="1536">
+      <span class="badge b1"><i>✦</i> Plano de 7 dias</span>
+      <span class="badge b2"><i>✦</i> + Comunidade</span>
+      <span class="badge b3"><i>∞</i> Acesso vitalício</span>
+    </div>
+
+    <a class="btn" href="https://pay.sunize.com.br/LXHVfkNO" data-checkout>Quero o protocolo<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <p class="btn-sub"><b>R$ 27,90</b> · pagamento único · acesso na hora</p>
+    <div class="trust">
+      <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Compra segura</span>
+      <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/></svg>Garantia 30 dias</span>
+      <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Chega no e-mail</span>
+    </div>
+
+    <div class="mydiag" id="myDiag" hidden>
+      <span class="ic">💌</span>
+      <div><small>Seu diagnóstico de hoje</small><strong id="myPat"></strong><p id="myLine"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="pad" style="padding-top:20px">
+  <div class="wrap reveal">
+    <p class="eyebrow">Antes de tudo</p>
+    <h2 class="h2">Quantas dessas <em>são você?</em></h2>
+    <p class="sub">Toca nas que doeram um pouquinho.</p>
+    <div class="checks" id="checks">
+      <button class="ck" type="button" aria-pressed="false"><span class="box"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>Respondo na hora — mesmo quando ele demorou horas pra me responder</button>
+      <button class="ck" type="button" aria-pressed="false"><span class="box"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>Meu humor depende de ele ter visto (ou não) a minha mensagem</button>
+      <button class="ck" type="button" aria-pressed="false"><span class="box"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>Sinto que eu dou muito mais do que recebo</button>
+      <button class="ck" type="button" aria-pressed="false"><span class="box"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>Já reli uma conversa inteira procurando onde eu errei</button>
+      <button class="ck" type="button" aria-pressed="false"><span class="box"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>Termina um, começa outro… e o final é sempre igual</button>
+      <button class="ck" type="button" aria-pressed="false"><span class="box"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span>Ainda penso em alguém que já devia ter saído da minha cabeça</button>
+    </div>
+    <div class="ck-out" id="ckOut" aria-live="polite">Toca nas frases que parecem com você 👆</div>
+  </div>
+</section>
+
+<!-- VERDADE -->
+<section class="dark pad">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow light">A verdade que ninguém te contou</p>
+      <h2 class="h2">Você não ama demais. Você ama <em>na ordem invertida.</em></h2>
+      <p>No começo, ele procura. Você se encanta e entrega tudo: atenção, carinho, disponibilidade.</p>
+      <p>Ele recebe sem precisar se mover. <strong>E quando ninguém precisa se mover… ninguém se move.</strong></p>
+      <p>Aí ele esfria. Você sente. E faz a única coisa que parece certa: entrega mais.</p>
+      <div class="quote">"Não é falta de amor da parte dele. <strong>É que ele nunca precisou te escolher.</strong>"</div>
+      <p>A Inversão é simples de entender e poderosa de viver: <strong>a ordem volta pro lugar.</strong> Você para de entregar antes da hora — e ele volta a ter espaço (e motivo) pra se mover.</p>
+    </div>
+
+    <div class="demo reveal" id="demo">
+      <div class="seg" id="seg" role="tablist" aria-label="Antes e depois da Inversão">
+        <span class="knob" aria-hidden="true"></span>
+        <button type="button" role="tab" aria-selected="true" data-v="before">Antes</button>
+        <button type="button" role="tab" aria-selected="false" data-v="after">Depois da Inversão</button>
+      </div>
+      <div class="phone"><div class="screen">
+        <div class="ph-head"><span class="av">E</span><div><strong>Ele</strong><span id="phStatus">visto por último hoje às 21:04</span></div></div>
+        <div class="ph-body" id="phBody"></div>
+      </div></div>
+      <div class="demo-cap"><span class="hand">cena ilustrativa — os prints reais estão logo abaixo ↓</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="pad">
+  <div class="wrap reveal">
+    <p class="eyebrow">Como funciona</p>
+    <h2 class="h2">4 movimentos. <em>Nenhum joguinho.</em></h2>
+    <div class="steps">
+      <div class="st"><span class="num">01</span><div><strong>Você para de alimentar o ciclo</strong><p>Identifica os gestos automáticos que deixam ele confortável demais — e para. Sem drama, sem sumir de propósito.</p></div></div>
+      <div class="st"><span class="num">02</span><div><strong>Você volta pro seu lugar</strong><p>Reorganiza onde coloca sua atenção e sua energia. Quando a sua posição muda, o seu peso na vida dele muda junto.</p></div></div>
+      <div class="st"><span class="num">03</span><div><strong>Você abre espaço pra ele se mover</strong><p>Sem ignorar, sem fingir desinteresse. Só deixando de fazer a parte dele por ele.</p></div></div>
+      <div class="st"><span class="num">04</span><div><strong>Sua paz deixa de depender dele</strong><p>Mesmo gostando muito. Mesmo quando ele demora. O seu dia volta a ser seu.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA -->
+<section class="pad proofsec">
+  <div class="wrap reveal">
+    <p class="eyebrow">Prints reais de alunas</p>
+    <h2 class="h2">Elas também estavam <em>aí.</em></h2>
+    <p class="sub">Arrasta pro lado → e toca pra ampliar</p>
+    <div class="proof" id="proof">
+      <figure class="pi"><figcaption class="cap">5 dias sem falar. Aí ele mandou: "sumida" 👀</figcaption><img src="src/img/print1.jpeg" alt="Print de aluna: depois de 5 dias sem comunicação, ele mandou mensagem perguntando se ela estava brava" width="888" height="832" loading="lazy"></figure>
+      <figure class="pi"><figcaption class="cap">"Ele simplesmente perguntou onde íamos passar o ano novo"</figcaption><img src="src/img/print2.jpeg" alt="Print de aluna contando que ele perguntou onde iam passar o ano novo" width="833" height="741" loading="lazy"></figure>
+      <figure class="pi"><figcaption class="cap">"…vai chegar com saudade minha" 🤍</figcaption><img src="src/img/print4.jpeg" alt="Print de aluna: ele perguntou a que horas ela chega e disse que vai chegar com saudade" width="962" height="423" loading="lazy"></figure>
+      <figure class="pi tall"><figcaption class="cap">"Elisa me ensinou a ter o meu amor-próprio de volta"</figcaption><span class="clip"><img src="src/img/print3.jpeg" alt="Depoimento de aluna contando que recuperou o amor-próprio e reatou com o ex-noivo" width="717" height="1442" loading="lazy"></span></figure>
+    </div>
+    <div class="pdots" id="pdots"><i class="on"></i><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- ENTREGÁVEIS -->
+<section class="pad" style="padding-top:36px">
+  <div class="wrap reveal">
+    <p class="eyebrow">O que você recebe</p>
+    <h2 class="h2">Tudo pra você <em>voltar pro seu lugar.</em></h2>
+    <div class="items">
+      <div class="it main"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2.5zM4 19.5A2 2 0 0 0 6 21h13"/><path d="M9 7h6"/></svg></span><div><span class="tg">o método</span><strong>Protocolo da Inversão Feminina</strong><p>O método completo, passo a passo, pra colocar a dinâmica de volta na ordem certa.</p></div></div>
+      <div class="it"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.7A8 8 0 1 1 21 12z"/></svg></span><div><span class="tg">ferramenta</span><strong>Guia de Mensagens Magnéticas</strong><p>O que mandar — e principalmente o que não mandar — quando ele esfria.</p></div></div>
+      <div class="it"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-8.6-8.6C2.2 8 4.3 5 7.4 5c1.9 0 3.4 1.1 4.6 2.6C13.2 6.1 14.7 5 16.6 5c3.1 0 5.2 3 4 6.4C19 15.6 12 20 12 20z"/></svg></span><div><span class="tg">pra você</span><strong>Controle Emocional Feminino</strong><p>Pra sua paz parar de depender do tempo de resposta dele.</p></div></div>
+      <div class="it"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6L9 21H3v-6z"/><path d="M12.5 5.5l6 6"/></svg></span><div><span class="tg">ferramenta</span><strong>Scripts de Reposicionamento</strong><p>Frases prontas pros momentos em que você travaria (ou mandaria textão).</p></div></div>
+      <div class="it"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><div><span class="tg">pra você</span><strong>Diagnóstico Avançado de Padrão Emocional</strong><p>Um mergulho mais fundo no padrão que você começou a enxergar hoje.</p></div></div>
+      <div class="it"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><div><span class="tg">passo a passo</span><strong>Plano de 7 Dias de Inversão</strong><p>O que fazer em cada dia da primeira semana. Sem ficar perdida.</p></div></div>
+      <div class="it"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><div><span class="tg">ferramenta</span><strong>Biblioteca de Respostas de Poder</strong><p>Respostas pra quando ele sumir, voltar, testar ou mandar aquele "oi, sumida".</p></div></div>
+      <div class="it"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></span><div><span class="tg">bônus</span><strong>Masterclass Surpresa</strong><p>Um conteúdo extra que você só descobre lá dentro 🤫</p></div></div>
+      <div class="it"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c.6-3.4 3-5.5 6-5.5s5.4 2.1 6 5.5"/><circle cx="17" cy="9" r="2.6"/><path d="M15.8 14.6c2.6.1 4.6 1.9 5.2 5.4"/></svg></span><div><span class="tg">bônus</span><strong>Comunidade de alunas</strong><p>Você não passa por isso sozinha. Tem mulher vivendo a mesma coisa do seu lado.</p></div></div>
+      <div class="it"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-2.7-4-4-6-4a4 4 0 0 0 0 8c2 0 4-1.3 6-4zm0 0c2 2.7 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.3-6 4z"/></svg></span><div><span class="tg">pra sempre</span><strong>Acesso vitalício</strong><p>Pagou uma vez, é seu. Volta sempre que precisar.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CARTA DA ELISA -->
+<section class="pad letter-sec">
+  <div class="wrap reveal">
+    <div class="arch"><img src="src/img/Ensaio%20de%20fotos%20advogada_.jpg" onerror="this.onerror=null;this.src='src/img/Ensaio_de_fotos_advogada_.jpg'" alt="Elisa Koscziol" width="190" height="250" loading="lazy"></div>
+    <p class="eyebrow c">Um recado meu pra você</p>
+    <div class="ltxt">
+      <p class="hi" id="hiName">Oi, você.</p>
+      <p>Antes de você decidir qualquer coisa, quero te dizer uma coisa:</p>
+      <p class="em">Você não é difícil de amar. Não é carente. Não é "demais".</p>
+      <p>Você só aprendeu a amar primeiro — e ninguém te ensinou a esperar o outro chegar até você.</p>
+      <p>O protocolo é isso: <strong>o caminho de volta pro seu lugar.</strong> Do seu jeito. Sem virar outra pessoa.</p>
+      <p>Te espero lá dentro.</p>
+      <p class="sig">Elisa</p>
+      <p class="sig-sub">Elisa Koscziol · criadora do Protocolo da Inversão Feminina</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRA QUEM -->
+<section class="pad">
+  <div class="wrap reveal">
+    <p class="eyebrow">Sendo bem honesta</p>
+    <h2 class="h2">Pra quem é <em>(e pra quem não é).</em></h2>
+    <div class="fit">
+      <div class="fit-box fit-yes">
+        <h3>É pra você se…</h3>
+        <ul>
+          <li><i>✓</i>Sente que sempre gosta mais e se esforça mais</li>
+          <li><i>✓</i>Vive o vai-e-volta e não aguenta mais esperar</li>
+          <li><i>✓</i>Terminou, mas ainda não conseguiu fechar por dentro</li>
+          <li><i>✓</i>Quer ser escolhida sem deixar de ser quem você é</li>
+        </ul>
+      </div>
+      <div class="fit-box fit-no">
+        <h3>Não é pra você se…</h3>
+        <ul>
+          <li><i>✕</i>Procura uma fórmula pra manipular alguém</li>
+          <li><i>✕</i>Quer resultado sem mudar nada no seu jeito de agir</li>
+        </ul>
+      </div>
+      <p class="care"><strong>Um cuidado importante:</strong> se na sua relação você sente medo, é controlada, humilhada ou agredida, o primeiro passo não é um método — é apoio. Liga no <strong>180</strong> (Central de Atendimento à Mulher). É gratuito e funciona 24 horas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="offer pad" id="offer">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow light c">Sua decisão de hoje</p>
+      <h2 class="h2">Tudo isso por <em>menos que um delivery.</em></h2>
+      <p class="lead" id="offerLead">Um pagamento. Acesso pra sempre. E um caminho inteiro pra você voltar pro seu lugar.</p>
+    </div>
+    <div class="ocard reveal">
+      <img class="mini" src="src/img/44ef7d98-adeb-4867-b3d9-ebe6cd9cedee.png" alt="" width="120" height="180" loading="lazy">
+      <ul class="olist">
+        <li><i>✓</i><span><b>Protocolo da Inversão Feminina</b> — o método completo</span></li>
+        <li><i>✓</i><span>Guia de Mensagens Magnéticas</span></li>
+        <li><i>✓</i><span>Controle Emocional Feminino</span></li>
+        <li><i>✓</i><span>Scripts de Reposicionamento</span></li>
+        <li><i>✓</i><span>Diagnóstico Avançado de Padrão Emocional</span></li>
+        <li><i>✓</i><span>Plano de 7 Dias de Inversão</span></li>
+        <li><i>✓</i><span>Biblioteca de Respostas de Poder</span></li>
+        <li><i>✓</i><span>Masterclass Surpresa</span></li>
+        <li><i>✓</i><span><b>Comunidade de alunas</b></span></li>
+        <li><i>✓</i><span><b>Acesso vitalício</b></span></li>
+      </ul>
+      <div class="price">
+        <small>Você investe hoje</small>
+        <div class="pv"><span class="c">R$</span><span class="v">27</span><span class="d">,90</span></div>
+        <p>pagamento único · <b>menos de R$ 1 por dia</b> no primeiro mês</p>
+      </div>
+      <a class="btn" href="https://pay.sunize.com.br/LXHVfkNO" data-checkout>Quero começar agora<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <p class="secure">🔒 Pagamento seguro · Acesso imediato no e-mail</p>
+    </div>
+    <div class="gtee reveal">
+      <img src="src/img/30-DIAS-FINAL-1.svg" alt="Selo de garantia de 30 dias" width="84" height="84" loading="lazy">
+      <div><h3>Garantia de 30 dias</h3><p>Entrou, viu e sentiu que não é pra você? Pede o reembolso em até 30 dias e recebe 100% de volta. Sem perguntas, sem climão.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="pad">
+  <div class="wrap reveal">
+    <p class="eyebrow">Dúvidas</p>
+    <h2 class="h2">Pode perguntar, <em>amiga.</em></h2>
+    <div class="faq">
+      <details><summary>Como eu recebo o acesso?<i>+</i></summary><p>Tudo é 100% digital. Assim que o pagamento é aprovado, o acesso chega automaticamente no seu e-mail.</p></details>
+      <details><summary>Funciona se já terminou?<i>+</i></summary><p>Sim. O protocolo trabalha o padrão, não um homem específico. Serve pra quem tá numa relação instável, pra quem terminou e não consegue fechar, e pra quem quer parar de repetir a mesma história.</p></details>
+      <details><summary>Vou ter que fazer joguinho ou ignorar ele?<i>+</i></summary><p>Não. Inversão não é sumir de propósito nem fingir que não liga. É parar de entregar antes da hora — e isso você faz sendo você mesma, carinhosa do seu jeito.</p></details>
+      <details><summary>Em quanto tempo eu vejo diferença?<i>+</i></summary><p>Cada relação tem o seu ritmo, então ninguém sério pode te prometer prazo. O que dá pra garantir: o Plano de 7 Dias te diz exatamente o que fazer na primeira semana. E tem aluna que sentiu a virada logo nas primeiras aulas (tá nos prints ali em cima).</p></details>
+      <details><summary>E se eu não gostar?<i>+</i></summary><p>Você tem 30 dias de garantia. Pediu o reembolso dentro do prazo, recebe 100% de volta.</p></details>
+      <details><summary>Por que é tão barato?<i>+</i></summary><p>Porque a ideia é que nenhuma mulher fique presa nesse padrão por falta de acesso. O material é digital, e o objetivo é chegar no maior número possível de mulheres.</p></details>
+      <details><summary>Isso substitui terapia?<i>+</i></summary><p>Não. É um conteúdo educativo sobre dinâmica de relacionamento. Se você sente que precisa de acompanhamento, procurar um psicólogo é sempre um ato de amor-próprio — e as duas coisas podem andar juntas.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final" id="final">
+  <div class="wrap reveal">
+    <div class="lines"><p id="finalHi">Você já viu o padrão.</p><p>Já sentiu o quanto ele custa.</p></div>
+    <h2 class="q">Agora é só uma escolha: continuar esperando… <em>ou voltar pro seu lugar?</em></h2>
+    <a class="btn" href="https://pay.sunize.com.br/LXHVfkNO" data-checkout>Quero voltar pro meu lugar<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <p class="btn-sub"><b>R$ 27,90</b> · acesso imediato · garantia de 30 dias</p>
+  </div>
+</section>
+
+<footer>
+  <em>Protocolo da Inversão Feminina</em>
+  por Elisa Koscziol · © 2026 · Todos os direitos reservados.<br>
+  Conteúdo educativo. Não substitui acompanhamento psicológico.
+  <!-- Coloque aqui os links de Termos de uso, Política de privacidade e Contato quando tiver -->
+</footer>
+
+<!-- CTA fixo no celular -->
+<div class="sticky" id="sticky" aria-hidden="true">
+  <div class="sticky-in">
+    <div class="pr"><strong>R$ 27,90</strong><span>acesso na hora</span></div>
+    <a class="btn" href="https://pay.sunize.com.br/LXHVfkNO" data-checkout tabindex="-1">Quero o protocolo<span class="arr"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Print ampliado"><img src="" alt=""><button type="button" aria-label="Fechar">✕</button></div>
+<script>
+(function(){
+  'use strict';
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}}};
+  function $(id){return document.getElementById(id)}
+
+  /* passa UTMs do anúncio pro checkout */
+  if(location.search){
+    document.querySelectorAll('a[data-checkout]').forEach(function(a){
+      try{var u=new URL(a.getAttribute('href'));new URLSearchParams(location.search).forEach(function(v,k){if(!u.searchParams.has(k))u.searchParams.set(k,v)});a.href=u.href}catch(e){}
+    });
+  }
+
+  /* personalização com o diagnóstico */
+  var PAT={
+    E:{name:'Entrega Antecipada',line:'Você entrega o coração antes dele escolher você.'},
+    P:{name:'Plantão Emocional',line:'Sua paz depende da próxima mensagem dele.'},
+    L:{name:'Laço Aberto',line:'Terminou lá fora. Aqui dentro, ainda não.'},
+    R:{name:'Roteiro Repetido',line:'Muda o rosto. O final é sempre o mesmo.'}
+  };
+  var name=store.get('pif_name')||'';
+  var res=null;try{res=JSON.parse(store.get('pif_result')||'null')}catch(e){}
+  if(name){
+    $('heroHand').textContent=name+', isso aqui é pra você 🤍';
+    $('hiName').textContent='Oi, '+name+'.';
+    $('finalHi').textContent=name+', você já viu o padrão.';
+  }
+  if(res&&PAT[res.top]){
+    var p=PAT[res.top];
+    $('heroPill').innerHTML='<b></b>Seu padrão: <strong></strong>';$('heroPill').querySelector('strong').textContent=p.name;
+    $('myPat').textContent=p.name;$('myLine').textContent=p.line+' É exatamente essa dinâmica que o protocolo te ensina a inverter.';
+    $('myDiag').hidden=false;
+  }
+
+  /* checklist */
+  var cks=document.querySelectorAll('.ck'),out=$('ckOut');
+  var msgs=['Toca nas frases que parecem com você 👆','Uma só já basta pra esse padrão te custar caro.','Duas. Não é coincidência — é o padrão falando.','Três. Você sabe do que eu tô falando, né?','Quatro. Respira. Você tá exatamente no lugar certo.','Cinco. Isso tem nome — e tem saída.','Todas. Amiga… vem comigo. 🤍'];
+  cks.forEach(function(b){b.addEventListener('click',function(){
+    b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');
+    var n=document.querySelectorAll('.ck[aria-pressed="true"]').length;
+    out.innerHTML=n?'<span class="n">'+n+'/6</span> ':'';out.appendChild(document.createTextNode(msgs[n]));
+  })});
+
+  /* antes / depois */
+  var DEMO={
+    before:{status:'visto por último hoje às 21:04',msgs:[
+      {w:'me',t:'Oi sumido 🙈 tudo bem?',h:'10:02'},
+      {w:'me',t:'Vi que você ficou online… tá ocupado?',h:'14:37'},
+      {w:'me',t:'Fiz alguma coisa? Se fiz, me fala',h:'21:15'},
+      {seen:'Visualizada ✓✓'}
+    ]},
+    after:{status:'online',msgs:[
+      {w:'him',t:'Sumida 👀',h:'19:40'},
+      {w:'him',t:'Tá brava comigo?',h:'19:41'},
+      {w:'him',t:'Posso te ligar mais tarde?',h:'19:41'},
+      {w:'me',t:'Hoje não dá, tô com as meninas. Amanhã pode ser 🤍',h:'22:10'}
+    ]}
+  };
+  var seg=$('seg'),phBody=$('phBody'),phStatus=$('phStatus'),demoTimers=[],touched=false,mode='before';
+  function play(v){
+    mode=v;demoTimers.forEach(clearTimeout);demoTimers=[];
+    seg.classList.toggle('after',v==='after');
+    seg.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.v===v?'true':'false')});
+    phStatus.textContent=DEMO[v].status;phBody.innerHTML='';
+    DEMO[v].msgs.forEach(function(m,i){
+      var e;
+      if(m.seen){e=document.createElement('div');e.className='seen';e.textContent=m.seen}
+      else{e=document.createElement('div');e.className='bb '+m.w;e.textContent=m.t;var s=document.createElement('small');s.textContent=m.h;e.appendChild(s)}
+      phBody.appendChild(e);
+      demoTimers.push(setTimeout(function(){e.classList.add('in')},reduce?0:250+i*520));
+    });
+  }
+  seg.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){touched=true;play(b.dataset.v)})});
+  play('before');
+  if('IntersectionObserver' in window){
+    var dio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){play('before');dio.disconnect();setTimeout(function(){if(!touched)play('after')},reduce?600:3400)}
+    })},{threshold:.5});
+    dio.observe($('demo'));
+  }
+
+  /* tocar no print abre ampliado */
+  var lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
+  document.querySelectorAll('.pi img').forEach(function(im){im.addEventListener('click',function(){lbImg.src=im.currentSrc||im.src;lbImg.alt=im.alt;lb.classList.add('on')})});
+  lb.addEventListener('click',function(){lb.classList.remove('on')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+
+  /* carrossel */
+  var pr=$('proof'),dots=document.querySelectorAll('#pdots i');
+  pr.addEventListener('scroll',function(){
+    var it=pr.querySelector('.pi');if(!it)return;
+    var w=it.getBoundingClientRect().width+12,i=Math.round(pr.scrollLeft/w);
+    dots.forEach(function(d,j){d.classList.toggle('on',j===i)});
+  },{passive:true});
+
+  /* aparecer ao rolar */
+  var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.1}):null;
+  document.querySelectorAll('.reveal').forEach(function(n){io?io.observe(n):n.classList.add('on')});
+
+  /* CTA fixo: aparece depois do primeiro botão, some na oferta e no final */
+  var sticky=$('sticky'),vis={hero:true,offer:false,final:false};
+  function upd(){var s=!vis.hero&&!vis.offer&&!vis.final;sticky.classList.toggle('show',s);sticky.setAttribute('aria-hidden',s?'false':'true');sticky.querySelector('a').tabIndex=s?0:-1}
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){
+      var k=e.target.dataset.k;
+      /* o botão do topo só "libera" o CTA fixo depois que ela passou dele */
+      vis[k]=k==='hero'?(e.isIntersecting||e.boundingClientRect.top>0):e.isIntersecting;
+    });upd()},{threshold:0});
+    var heroBtn=document.querySelector('.hero .btn');heroBtn.dataset.k='hero';so.observe(heroBtn);
+    var oc=document.querySelector('.ocard');oc.dataset.k='offer';so.observe(oc);
+    var fb=document.querySelector('#final .btn');fb.dataset.k='final';so.observe(fb);
+  }
+})();
+</script>
+</body>
+</html>
