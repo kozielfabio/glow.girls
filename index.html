@@ -58,7 +58,7 @@ button,a{font-family:inherit;touch-action:manipulation}
 .chat{margin-top:26px;background:rgba(255,253,251,.96);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
 .chat-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);background:#fff}
 .ava{position:relative;width:46px;height:46px;flex-shrink:0}
-.ava img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:50% 16%;border:2px solid #fff;box-shadow:0 0 0 1.5px var(--gold-soft)}
+.ava img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:55% 8%;border:2px solid #fff;box-shadow:0 0 0 1.5px var(--gold-soft)}
 .ava .on{position:absolute;right:0;bottom:1px;width:12px;height:12px;border-radius:50%;background:#5DBB8A;border:2.5px solid #fff}
 .who{flex:1;min-width:0}
 .who strong{display:block;font-size:15.5px;font-weight:800;line-height:1.25}
@@ -104,7 +104,7 @@ button,a{font-family:inherit;touch-action:manipulation}
 
 /* aviso de nova mensagem (no lugar de rolar a tela sozinho) */
 .newmsg{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));z-index:40;transform:translateX(-50%);display:flex;align-items:center;gap:9px;border:0;border-radius:99px;padding:11px 16px 11px 12px;background:var(--espresso);color:#fff;font-size:13.5px;font-weight:700;cursor:pointer;box-shadow:0 16px 30px -12px rgba(35,25,23,.6);white-space:nowrap;animation:nm .35s cubic-bezier(.2,.8,.2,1)}
-.newmsg img{width:26px;height:26px;border-radius:50%;object-fit:cover;object-position:50% 16%}
+.newmsg img{width:26px;height:26px;border-radius:50%;object-fit:cover;object-position:55% 8%}
 .newmsg i{font-style:normal;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#E9C987;color:var(--espresso);font-size:13px;animation:bob 1.4s infinite}
 @keyframes nm{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
@@ -125,14 +125,16 @@ button,a{font-family:inherit;touch-action:manipulation}
 footer{margin-top:48px;text-align:center;font-size:12px;color:var(--cocoa);opacity:.8}
 footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;color:var(--gold-ink);display:block;margin-bottom:4px}
 @media (max-width:360px){.lock{display:none}}
+/* avatar redondo da expert: aproxima no rosto onde o navegador permite */
+@supports (object-view-box: inset(0)){.face{object-view-box:inset(5% 13% 45% 27%)}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .hero h1 path{stroke-dashoffset:0}
 }
 </style>
 <script>
-/* foto da expert: tenta psicologa.jpg e, se não achar, .jpeg, .png, .webp e sem extensão */
-function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src='src/img/psicologa'+(e[n]?'.'+e[n]:'')}else{i.onerror=null}}
+/* foto da expert: src/img/psicologaa.png (se não achar, tenta outros nomes parecidos) */
+function fotoExpert(i){var e=['src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
 </script>
 </head>
 <body>
@@ -151,7 +153,7 @@ function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.g
   <section class="chat rise r5" aria-label="Conversa com a Elisa">
     <div class="chat-head">
       <div class="ava">
-        <img src="src/img/psicologa.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="46" height="46">
+        <img class="face" src="src/img/psicologaa.png" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="46" height="46">
         <span class="on"></span>
       </div>
       <div class="who"><strong>Elisa Koscziol</strong><span id="status">online</span></div>
@@ -183,7 +185,7 @@ function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.g
   </footer>
 </main>
 
-<button class="newmsg" id="newmsg" type="button" hidden><img src="src/img/psicologa.jpg" onerror="fotoExpert(this)" alt=""><span id="newmsgTxt">Nova mensagem da Elisa</span><i>↓</i></button>
+<button class="newmsg" id="newmsg" type="button" hidden><img class="face" src="src/img/psicologaa.png" onerror="fotoExpert(this)" alt=""><span id="newmsgTxt">Nova mensagem da Elisa</span><i>↓</i></button>
 
 <script>
 (function(){
