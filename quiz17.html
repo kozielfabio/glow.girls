@@ -192,8 +192,8 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;color:va
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 <script>
-/* foto da expert: tenta psicologa.jpg e, se não achar, .jpeg, .png, .webp e sem extensão */
-function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src='src/img/psicologa'+(e[n]?'.'+e[n]:'')}else{i.onerror=null}}
+/* foto da expert: src/img/psicologaa.png (se não achar, tenta outros nomes parecidos) */
+function fotoExpert(i){var e=['src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
 </script>
 <noscript><style>#content{display:block!important}#gate{display:none!important}</style></noscript>
 </head>
@@ -288,7 +288,7 @@ function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.g
     </section>
 
     <section class="sec note reveal">
-      <div class="arch"><img src="src/img/psicologa.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="150" height="196" loading="lazy"></div>
+      <div class="arch"><img src="src/img/psicologaa.png" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="150" height="196" loading="lazy"></div>
       <p class="eyebrow">Um recado pra você</p>
       <div class="ltxt">
         <p class="hi" id="hiName">Oi, você.</p>
