@@ -31,7 +31,7 @@ img{display:block}
 .back{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--paper);color:var(--cocoa);display:grid;place-items:center;cursor:pointer;flex-shrink:0}
 .back[disabled]{visibility:hidden}
 .who{flex:1;display:flex;align-items:center;gap:9px;min-width:0}
-.who img{width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:50% 16%;box-shadow:0 0 0 1.5px var(--gold-soft);flex-shrink:0}
+.who img{width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:55% 8%;box-shadow:0 0 0 1.5px var(--gold-soft);flex-shrink:0}
 .who span{font-size:13px;font-weight:700;color:var(--cocoa);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .count{font-size:12.5px;font-weight:800;color:var(--rose);background:var(--blush);border-radius:99px;padding:5px 11px;white-space:nowrap}
 .bar{height:6px;border-radius:99px;background:var(--sand);overflow:hidden}
@@ -78,7 +78,7 @@ input[type=range]::-moz-range-thumb{width:34px;height:34px;border-radius:50%;bor
 .dock.show{transform:none}
 .dock-in{max-width:480px;margin:0 auto}
 .eli{display:flex;align-items:flex-end;gap:9px;margin-bottom:12px}
-.eli img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:50% 16%;flex-shrink:0;box-shadow:0 0 0 1.5px var(--gold-soft)}
+.eli img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:55% 8%;flex-shrink:0;box-shadow:0 0 0 1.5px var(--gold-soft)}
 .bub{flex:1;background:#fff;border:1px solid var(--line);border-radius:18px 18px 18px 6px;padding:10px 14px;font-size:14.5px;line-height:1.42;min-height:44px}
 .bub small{display:block;font-size:10.5px;font-weight:800;letter-spacing:.08em;color:var(--rose);margin-bottom:2px;text-transform:uppercase}
 .bub .tx{animation:pop .35s cubic-bezier(.2,.8,.2,1) backwards}
@@ -95,7 +95,7 @@ input[type=range]::-moz-range-thumb{width:34px;height:34px;border-radius:50%;bor
 /* carregando */
 .loading{position:relative;z-index:1;max-width:420px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px}
 .ring{position:relative;width:132px;height:132px;margin-bottom:24px}
-.ring img{position:absolute;left:12px;top:12px;width:108px;height:108px;border-radius:50%;object-fit:cover;object-position:50% 16%}
+.ring img{position:absolute;left:12px;top:12px;width:108px;height:108px;border-radius:50%;object-fit:cover;object-position:55% 8%}
 .ring svg{position:absolute;left:0;top:0;transform:rotate(-90deg)}
 .ring circle{fill:none;stroke-width:4}
 .ring .bg{stroke:var(--sand)}
@@ -112,11 +112,13 @@ input[type=range]::-moz-range-thumb{width:34px;height:34px;border-radius:50%;bor
 .lsteps .c svg{opacity:0}
 .lsteps li.done .c svg{opacity:1}
 @keyframes spin{to{transform:rotate(360deg)}}
+/* avatar redondo da expert: aproxima no rosto onde o navegador permite */
+@supports (object-view-box: inset(0)){.face{object-view-box:inset(5% 13% 45% 27%)}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 <script>
-/* foto da expert: tenta psicologa.jpg e, se não achar, .jpeg, .png, .webp e sem extensão */
-function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src='src/img/psicologa'+(e[n]?'.'+e[n]:'')}else{i.onerror=null}}
+/* foto da expert: src/img/psicologaa.png (se não achar, tenta outros nomes parecidos) */
+function fotoExpert(i){var e=['src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
 </script>
 </head>
 <body>
@@ -126,7 +128,7 @@ function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.g
   <div class="top-in">
     <div class="top-row">
       <button class="back" id="back" type="button" aria-label="Voltar para a pergunta anterior" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
-      <div class="who"><img src="src/img/psicologa.jpg" onerror="fotoExpert(this)" alt="" width="30" height="30"><span id="whoTxt">Seu diagnóstico com a Elisa</span></div>
+      <div class="who"><img class="face" src="src/img/psicologaa.png" onerror="fotoExpert(this)" alt="" width="30" height="30"><span id="whoTxt">Seu diagnóstico com a Elisa</span></div>
       <span class="count" id="count">1 de 4</span>
     </div>
     <div class="bar"><span id="fill"></span></div>
@@ -138,7 +140,7 @@ function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.g
 <div class="dock" id="dock" aria-live="polite">
   <div class="dock-in">
     <div class="eli">
-      <img src="src/img/psicologa.jpg" onerror="fotoExpert(this)" alt="" width="34" height="34">
+      <img class="face" src="src/img/psicologaa.png" onerror="fotoExpert(this)" alt="" width="34" height="34">
       <div class="bub" id="bub"><small>Elisa</small><div class="dots"><i></i><i></i><i></i></div></div>
     </div>
     <button class="btn" id="nextBtn" type="button">Continuar<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
@@ -147,7 +149,7 @@ function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.g
 
 <section class="loading" id="loading" hidden aria-live="polite">
   <div class="ring">
-    <img src="src/img/psicologa.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="108" height="108">
+    <img class="face" src="src/img/psicologaa.png" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="108" height="108">
     <svg width="132" height="132" viewBox="0 0 132 132" aria-hidden="true"><circle class="bg" cx="66" cy="66" r="62"/><circle class="fg" id="ringFg" cx="66" cy="66" r="62"/></svg>
   </div>
   <h2 id="loTitle">Lendo suas <em>respostas…</em></h2>
