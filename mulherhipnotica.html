@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="src/img/capa produto.png">
+<link rel="preload" as="image" href="src/img/capapdoruto.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
@@ -228,6 +228,10 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;color:va
 /* foto da expert: src/img/psicologaa.png (se não achar, tenta outros nomes parecidos) */
 function fotoExpert(i){var e=['src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
 </script>
+<script>
+/* capa do produto: src/img/capapdoruto.png (se não achar, tenta outros nomes parecidos) */
+function fotoCapa(i){var e=['src/img/capa_produto.png','src/img/capaproduto.png','src/img/capa-produto.png','src/img/capapdoruto.jpg','src/img/capa_produto.jpg','src/img/capaproduto.jpg','src/img/capapdoruto.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
+</script>
 </head>
 <body>
 
@@ -243,7 +247,7 @@ function fotoExpert(i){var e=['src/img/psicologa.png','src/img/psicologaa.jpg','
     <p class="nojogo">Sem implorar <span>·</span> Sem joguinho <span>·</span> Sem se diminuir</p>
 
     <div class="cover-wrap">
-      <div class="cover-card"><img class="cover" src="src/img/capa_produto.png" alt="Capa da Inversão Magnética Feminina 2.0" width="1672" height="941" fetchpriority="high"><span class="shine"></span></div>
+      <div class="cover-card"><img class="cover" src="src/img/capapdoruto.png" onerror="fotoCapa(this)" alt="Capa da Inversão Magnética Feminina 2.0" width="1672" height="941" fetchpriority="high"><span class="shine"></span></div>
       <span class="badge b1"><i>✦</i> Plano de 7 dias</span>
       <span class="badge b2"><i>✦</i> + Comunidade</span>
       <span class="badge b3"><i>∞</i> Acesso vitalício</span>
@@ -351,7 +355,7 @@ function fotoExpert(i){var e=['src/img/psicologa.png','src/img/psicologaa.jpg','
       <div class="forpat" id="forPat" hidden><span></span></div>
     </div>
     <div class="ocard reveal" id="ocard">
-      <img class="mini" src="src/img/capa_produto.png" alt="Capa da Inversão Magnética Feminina 2.0" width="340" height="191" loading="lazy">
+      <img class="mini" src="src/img/capapdoruto.png" onerror="fotoCapa(this)" alt="Capa da Inversão Magnética Feminina 2.0" width="340" height="191" loading="lazy">
       <ul class="olist">
         <li><i>✓</i><span><b>Inversão Magnética Feminina 2.0</b><em>o método completo, passo a passo</em></span></li>
         <li><i>✓</i><span><b>Guia de Mensagens Magnéticas</b><em>o que mandar (e o que nunca mandar) quando ele esfria</em></span></li>
