@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Seu diagnóstico chegou · Protocolo da Inversão Feminina</title>
+<title>Seu diagnóstico chegou · Inversão Magnética Feminina 2.0</title>
 <meta name="theme-color" content="#FBF7F3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -191,12 +191,16 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;color:va
 .js .reveal.on{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
+<script>
+/* foto da expert: tenta psicologa.jpg e, se não achar, .jpeg, .png, .webp e sem extensão */
+function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src='src/img/psicologa'+(e[n]?'.'+e[n]:'')}else{i.onerror=null}}
+</script>
 <noscript><style>#content{display:block!important}#gate{display:none!important}</style></noscript>
 </head>
 <body>
 <div class="glow" aria-hidden="true"></div>
 <main class="page">
-  <header class="brand"><i></i><span>Protocolo da Inversão Feminina</span><i></i></header>
+  <header class="brand"><i></i><span>Inversão Magnética Feminina 2.0</span><i></i></header>
 
   <section class="gate" id="gate">
     <p class="eyebrow">Diagnóstico pronto</p>
@@ -276,14 +280,15 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;color:va
       <p class="sub">Arrasta pro lado e toca pra ampliar →</p>
       <div class="proof" id="proof">
         <figure class="pi"><figcaption class="cap">5 dias sem falar. Aí ele mandou: "sumida" 👀</figcaption><img src="src/img/print1.jpeg" alt="Print de aluna: depois de 5 dias sem comunicação, ele mandou mensagem perguntando se ela estava brava" width="888" height="832" loading="lazy"></figure>
+        <figure class="pi"><figcaption class="cap">Mais um print de aluna 🤍</figcaption><img src="src/img/depoimento1.png" alt="Print de depoimento de aluna" loading="lazy"></figure>
         <figure class="pi"><figcaption class="cap">"Ele simplesmente perguntou onde íamos passar o ano novo"</figcaption><img src="src/img/print2.jpeg" alt="Print de aluna contando que ele perguntou onde iam passar o ano novo" width="833" height="741" loading="lazy"></figure>
         <figure class="pi"><figcaption class="cap">"…vai chegar com saudade minha" 🤍</figcaption><img src="src/img/print4.jpeg" alt="Print de aluna: ele perguntou a que horas ela chega e disse que vai chegar com saudade" width="962" height="423" loading="lazy"></figure>
       </div>
-      <div class="pdots" id="pdots"><i class="on"></i><i></i><i></i></div>
+      <div class="pdots" id="pdots"><i class="on"></i><i></i><i></i><i></i></div>
     </section>
 
     <section class="sec note reveal">
-      <div class="arch"><img src="src/img/Ensaio%20de%20fotos%20advogada_.jpg" onerror="this.onerror=null;this.src='src/img/Ensaio_de_fotos_advogada_.jpg'" alt="Elisa Koscziol" width="150" height="196" loading="lazy"></div>
+      <div class="arch"><img src="src/img/psicologa.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="150" height="196" loading="lazy"></div>
       <p class="eyebrow">Um recado pra você</p>
       <div class="ltxt">
         <p class="hi" id="hiName">Oi, você.</p>
@@ -291,13 +296,13 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;color:va
         <p>Mas repara: tudo isso é sobre <strong>a ordem</strong>, não sobre o seu valor.</p>
         <p>Você não precisa virar outra mulher. Precisa parar de correr. <strong>E deixar ele correr atrás.</strong></p>
         <p class="sig">Elisa</p>
-        <p class="sig-sub">Elisa Koscziol · criadora do Protocolo da Inversão Feminina</p>
+        <p class="sig-sub">Elisa Koscziol · criadora da Inversão Magnética Feminina 2.0</p>
       </div>
       <a class="btn" href="mulherhipnotica.html" data-next>Me mostra como virar esse jogo<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       <p class="btn-sub">Te mostro na próxima página</p>
     </section>
 
-    <footer><em>Protocolo da Inversão Feminina</em>por Elisa Koscziol · © 2026</footer>
+    <footer><em>Inversão Magnética Feminina 2.0</em>por Elisa Koscziol · © 2026</footer>
   </div>
 </main>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Print ampliado"><img src="data:," alt=""><button type="button" aria-label="Fechar">✕</button></div>
@@ -383,7 +388,7 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;color:va
   }
   if(res){fillResult()}else{
     $('resultCard').hidden=true;$('noData').hidden=false;$('signsSec').hidden=true;$('changeBox').hidden=true;
-    $('bridgeTxt').innerHTML='Quer pular direto? <em>O protocolo tá aqui.</em>';
+    $('bridgeTxt').innerHTML='Quer pular direto? <em>O método tá aqui.</em>';
   }
 
   /* envelope */
