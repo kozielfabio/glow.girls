@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ele esfriou? · Protocolo da Inversão Feminina</title>
+<title>Ele esfriou? · Inversão Magnética Feminina 2.0</title>
 <meta name="description" content="Descobre em 2 minutos o que tá afastando ele. E como fazer ele voltar a correr atrás de você.">
 <meta name="theme-color" content="#FBF7F3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,12 +130,16 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;color:va
   .hero h1 path{stroke-dashoffset:0}
 }
 </style>
+<script>
+/* foto da expert: tenta psicologa.jpg e, se não achar, .jpeg, .png, .webp e sem extensão */
+function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src='src/img/psicologa'+(e[n]?'.'+e[n]:'')}else{i.onerror=null}}
+</script>
 </head>
 <body>
 <div class="glow" aria-hidden="true"></div>
 
 <main class="page">
-  <header class="brand rise r1"><i></i><span>Protocolo da Inversão Feminina</span><i></i></header>
+  <header class="brand rise r1"><i></i><span>Inversão Magnética Feminina 2.0</span><i></i></header>
 
   <section class="hero">
     <div class="chip rise r1"><b></b>Diagnóstico gratuito · 2 minutos</div>
@@ -147,7 +151,7 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;color:va
   <section class="chat rise r5" aria-label="Conversa com a Elisa">
     <div class="chat-head">
       <div class="ava">
-        <img src="src/img/Ensaio%20de%20fotos%20advogada_.jpg" onerror="this.onerror=null;this.src='src/img/Ensaio_de_fotos_advogada_.jpg'" alt="Elisa Koscziol" width="46" height="46">
+        <img src="src/img/psicologa.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="46" height="46">
         <span class="on"></span>
       </div>
       <div class="who"><strong>Elisa Koscziol</strong><span id="status">online</span></div>
@@ -174,12 +178,12 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;color:va
   </section>
 
   <footer>
-    <em>Protocolo da Inversão Feminina</em>
+    <em>Inversão Magnética Feminina 2.0</em>
     por Elisa Koscziol · © 2026
   </footer>
 </main>
 
-<button class="newmsg" id="newmsg" type="button" hidden><img src="src/img/Ensaio%20de%20fotos%20advogada_.jpg" onerror="this.onerror=null;this.src='src/img/Ensaio_de_fotos_advogada_.jpg'" alt=""><span id="newmsgTxt">Nova mensagem da Elisa</span><i>↓</i></button>
+<button class="newmsg" id="newmsg" type="button" hidden><img src="src/img/psicologa.jpg" onerror="fotoExpert(this)" alt=""><span id="newmsgTxt">Nova mensagem da Elisa</span><i>↓</i></button>
 
 <script>
 (function(){
