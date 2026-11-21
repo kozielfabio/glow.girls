@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="src/img/44ef7d98-adeb-4867-b3d9-ebe6cd9cedee.png">
+<link rel="preload" as="image" href="src/img/capa_produto.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
@@ -67,15 +67,19 @@ section{position:relative}
 .hero .sub{max-width:370px;margin:0 auto}
 .nojogo{margin-top:12px;font-size:14px;font-weight:800;color:var(--ink)}
 .nojogo span{color:var(--gold)}
-.cover-wrap{position:relative;width:min(230px,60vw);margin:32px auto 30px}
-.cover-wrap::before{content:'';position:absolute;left:-30%;right:-30%;top:-18%;bottom:-18%;background:radial-gradient(closest-side,rgba(233,201,135,.5),transparent 70%);z-index:0}
-.cover{position:relative;z-index:1;border-radius:14px;box-shadow:0 34px 50px -24px rgba(60,30,25,.6),0 0 0 1px rgba(184,146,90,.25);animation:hov 5s ease-in-out infinite}
-@keyframes hov{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-1deg) translateY(-8px)}}
+.cover-wrap{position:relative;width:100%;max-width:440px;margin:42px auto 44px}
+.cover-wrap::before{content:'';position:absolute;left:-10%;right:-10%;top:-28%;bottom:-28%;background:radial-gradient(closest-side,rgba(233,201,135,.55),transparent 72%);z-index:0}
+.cover-wrap::after{content:'';position:absolute;left:-8px;top:-8px;right:-8px;bottom:-8px;border:1px solid rgba(184,146,90,.55);border-radius:24px;transform:rotate(1.2deg);z-index:0}
+.cover-card{position:relative;z-index:1;border-radius:18px;overflow:hidden;aspect-ratio:1672/941;background:#E9DDD2;box-shadow:0 40px 60px -28px rgba(60,30,25,.65),0 0 0 1px rgba(184,146,90,.35);animation:hov 5s ease-in-out infinite}
+.cover{display:block;width:100%;height:100%;object-fit:cover}
+.cover-card .shine{position:absolute;top:0;bottom:0;left:0;right:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.32) 50%,transparent 65%);transform:translateX(-130%);animation:coverShine 5.5s 1.8s infinite;pointer-events:none}
+@keyframes coverShine{0%{transform:translateX(-130%)}28%,100%{transform:translateX(130%)}}
+@keyframes hov{0%,100%{transform:rotate(-.8deg) translateY(0)}50%{transform:rotate(0deg) translateY(-6px)}}
 .badge{position:absolute;z-index:2;background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:8px 12px;font-size:12px;font-weight:800;white-space:nowrap;box-shadow:0 12px 22px -14px rgba(110,60,50,.7);display:flex;align-items:center;gap:6px}
 .badge i{font-style:normal;color:var(--rose)}
-.b1{left:-30%;top:16%;animation:bob 4s ease-in-out infinite}
-.b2{right:-30%;top:46%;animation:bob 4.6s .4s ease-in-out infinite}
-.b3{left:-22%;bottom:8%;animation:bob 4.2s .8s ease-in-out infinite}
+.b1{left:10px;bottom:-17px;animation:bob 4s ease-in-out infinite}
+.b2{right:10px;top:-17px;animation:bob 4.6s .4s ease-in-out infinite}
+.b3{right:10px;bottom:-17px;animation:bob 4.2s .8s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .mydiag{margin-top:24px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;box-shadow:var(--shadow)}
 .mydiag .ic{width:44px;height:44px;border-radius:14px;background:var(--blush);display:grid;place-items:center;font-size:20px;flex-shrink:0}
@@ -160,7 +164,7 @@ section{position:relative}
 .forpat{text-align:center;margin-top:14px}
 .forpat span{display:inline-block;padding:7px 14px;border-radius:99px;background:rgba(235,169,185,.14);color:var(--rose-light);font-size:13px;font-weight:700}
 .ocard{margin-top:24px;background:linear-gradient(180deg,var(--espresso-2),#281D1A);border:1px solid rgba(228,207,168,.28);border-radius:30px;padding:24px 20px;box-shadow:0 40px 70px -40px rgba(0,0,0,.8)}
-.ocard .mini{width:116px;margin:-4px auto 18px;border-radius:10px;box-shadow:0 20px 34px -16px rgba(0,0,0,.8);transform:rotate(-2deg)}
+.ocard .mini{width:100%;max-width:340px;height:auto;margin:-2px auto 22px;border-radius:14px;box-shadow:0 22px 36px -16px rgba(0,0,0,.85),0 0 0 1px rgba(233,201,135,.35)}
 .olist{list-style:none;display:flex;flex-direction:column;gap:11px}
 .olist li{display:flex;gap:11px;font-size:15px;line-height:1.4;color:rgba(246,237,230,.92)}
 .olist li i{flex-shrink:0;width:21px;height:21px;border-radius:50%;background:rgba(233,201,135,.16);color:var(--gold-bright);display:grid;place-items:center;margin-top:1px;font-style:normal;font-size:12px;font-weight:800}
@@ -217,12 +221,12 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;color:va
 
 .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
 .js .reveal.on{opacity:1;transform:none}
-@media (max-width:370px){.b1,.b3{left:-20%}.b2{right:-20%}.badge{font-size:11px;padding:7px 10px}}
+@media (max-width:370px){.b1{left:6px}.b2,.b3{right:6px}.badge{font-size:11px;padding:7px 10px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 <script>
-/* foto da expert: tenta psicologa.jpg e, se não achar, .jpeg, .png, .webp e sem extensão */
-function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src='src/img/psicologa'+(e[n]?'.'+e[n]:'')}else{i.onerror=null}}
+/* foto da expert: src/img/psicologaa.png (se não achar, tenta outros nomes parecidos) */
+function fotoExpert(i){var e=['src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
 </script>
 </head>
 <body>
@@ -239,7 +243,7 @@ function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.g
     <p class="nojogo">Sem implorar <span>·</span> Sem joguinho <span>·</span> Sem se diminuir</p>
 
     <div class="cover-wrap">
-      <img class="cover" src="src/img/44ef7d98-adeb-4867-b3d9-ebe6cd9cedee.png" alt="Capa da Inversão Magnética Feminina 2.0 com Elisa Koscziol" width="1024" height="1536">
+      <div class="cover-card"><img class="cover" src="src/img/capa_produto.png" alt="Capa da Inversão Magnética Feminina 2.0" width="1672" height="941" fetchpriority="high"><span class="shine"></span></div>
       <span class="badge b1"><i>✦</i> Plano de 7 dias</span>
       <span class="badge b2"><i>✦</i> + Comunidade</span>
       <span class="badge b3"><i>∞</i> Acesso vitalício</span>
@@ -323,7 +327,7 @@ function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.g
 <!-- CARTA -->
 <section class="pad letter-sec">
   <div class="wrap reveal">
-    <div class="arch"><img src="src/img/psicologa.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="160" height="210" loading="lazy"></div>
+    <div class="arch"><img src="src/img/psicologaa.png" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="160" height="210" loading="lazy"></div>
     <p class="eyebrow c">De mulher pra mulher</p>
     <div class="ltxt">
       <p class="hi" id="hiName">Oi, você.</p>
@@ -347,7 +351,7 @@ function fotoExpert(i){var e=['jpeg','png','webp','JPG','JPEG','PNG',''],n=+(i.g
       <div class="forpat" id="forPat" hidden><span></span></div>
     </div>
     <div class="ocard reveal" id="ocard">
-      <img class="mini" src="src/img/44ef7d98-adeb-4867-b3d9-ebe6cd9cedee.png" alt="" width="116" height="174" loading="lazy">
+      <img class="mini" src="src/img/capa_produto.png" alt="Capa da Inversão Magnética Feminina 2.0" width="340" height="191" loading="lazy">
       <ul class="olist">
         <li><i>✓</i><span><b>Inversão Magnética Feminina 2.0</b><em>o método completo, passo a passo</em></span></li>
         <li><i>✓</i><span><b>Guia de Mensagens Magnéticas</b><em>o que mandar (e o que nunca mandar) quando ele esfria</em></span></li>
