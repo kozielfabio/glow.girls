@@ -102,11 +102,33 @@ section{position:relative;overflow:hidden}
 .bg2{right:2px;top:20px;animation:bob 4.6s .4s ease-in-out infinite}
 .bg3{right:2px;bottom:6px;animation:bob 4.2s .8s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-.mydiag{margin-top:24px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:15px 16px;display:flex;gap:13px;align-items:flex-start}
-.mydiag .ic{width:42px;height:42px;border-radius:13px;background:rgba(235,163,183,.12);display:grid;place-items:center;font-size:20px;flex-shrink:0}
-.mydiag small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:800}
-.mydiag strong{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:25px;line-height:1.1;color:var(--rose);margin:2px 0 3px}
-.mydiag p{font-size:14.5px;color:var(--mu);line-height:1.45}
+.ocard .mini{width:100%;max-width:340px;margin:0 auto 18px;border-radius:14px;box-shadow:0 22px 36px -16px rgba(0,0,0,.9),0 0 0 1px rgba(233,201,135,.4)}
+
+/* 3 perguntas */
+.yes{background:linear-gradient(180deg,var(--bg-2),#1A0F12)}
+.costs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:4px 0 22px}
+.costs span{font-size:13.5px;font-weight:700;color:#FFD2DA;background:rgba(255,143,163,.1);border:1px solid rgba(255,143,163,.3);border-radius:99px;padding:7px 12px}
+.yq{background:var(--card);border:1px solid rgba(235,163,183,.25);border-radius:26px;padding:20px 18px 22px;box-shadow:0 30px 50px -30px rgba(0,0,0,.9);min-height:236px}
+.yq-dots{display:flex;justify-content:center;gap:7px;margin-bottom:14px}
+.yq-dots i{width:8px;height:8px;border-radius:99px;background:rgba(246,237,230,.16);transition:all .3s}
+.yq-dots i.on{width:26px;background:var(--rose)}
+.yq-dots i.ok{background:var(--green)}
+.yq-step{animation:yIn .4s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes yIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+.yq-n{text-align:center;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--gold);margin-bottom:6px}
+.yq-t{text-align:center;font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:29px;line-height:1.08;margin-bottom:18px}
+.yq-o{display:grid;grid-template-columns:1.5fr 1fr;gap:9px}
+.yb{border:0;border-radius:16px;padding:16px 10px;font-family:inherit;font-size:15.5px;font-weight:800;cursor:pointer;transition:transform .15s,opacity .2s}
+.yb:active{transform:scale(.97)}
+.yb.main{background:linear-gradient(135deg,#E48AA5,#9C3F63);color:#fff;box-shadow:0 14px 26px -12px rgba(226,120,155,.6)}
+.yb.alt{background:rgba(246,237,230,.06);color:var(--mu);border:1px solid var(--line-2)}
+.yq-o.done .yb{pointer-events:none;opacity:.35}
+.yq-o.done .yb.pick{opacity:1}
+.yq-r{min-height:24px;margin-top:14px;text-align:center;font-size:15px;font-weight:700;color:var(--rose);animation:yIn .35s backwards}
+.yq-end{text-align:center}
+.yq-end .ok3{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+.yq-end p{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:30px;line-height:1.08;margin-bottom:16px}
+.yq-end p em{font-style:italic;color:var(--rose)}
 
 /* vídeo (só aparece quando tiver o código do player) */
 .vsl-s{padding:44px 0 6px}
@@ -179,15 +201,6 @@ section{position:relative;overflow:hidden}
 .seen{align-self:flex-end;font-size:11.5px;font-weight:700;color:var(--mu-2);animation:msgIn .4s backwards}
 .demo-cap{text-align:center;margin-top:12px;font-size:12.5px;color:var(--mu-2);font-weight:600}
 
-/* por que ele esfriou */
-.lines{list-style:none;display:flex;flex-direction:column;gap:10px;margin:18px 0}
-.lines li{display:flex;align-items:baseline;gap:12px;font-size:17px;font-weight:600;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
-.lines li i{font-style:normal;color:var(--red);font-size:15px}
-.inv{margin-top:6px;padding:20px 18px;border-radius:22px;background:linear-gradient(135deg,rgba(233,201,135,.12),rgba(233,201,135,.03));border:1px solid rgba(233,201,135,.35)}
-.inv small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--gold);margin-bottom:6px}
-.inv p{font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;line-height:1.16}
-.inv p b{color:var(--rose);font-style:italic}
-
 /* prints */
 .proofsec{background:var(--bg-2)}
 .proof{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:18px -20px 0;padding:6px 20px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
@@ -214,16 +227,6 @@ section{position:relative;overflow:hidden}
 .more{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .more span{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:8px 12px;font-size:13.5px;font-weight:700}
 .more span i{font-style:normal;color:var(--green);font-weight:800}
-
-/* se ela fechar */
-.loss{background:linear-gradient(180deg,var(--bg-2),#1A0F12)}
-.tl{margin-top:18px;display:flex;flex-direction:column;gap:10px}
-.tl .st{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:16px;padding:14px 16px}
-.tl .st small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--red);margin-bottom:3px}
-.tl .st p{font-size:16.5px;font-weight:600;line-height:1.4}
-.decide{margin-top:24px;text-align:center}
-.decide p{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:36px;line-height:1.05;margin-bottom:16px}
-.decide p em{font-style:italic;color:var(--rose)}
 
 /* oferta */
 .offer{background:radial-gradient(70% 40% at 50% 0%, rgba(233,201,135,.16), transparent 70%),var(--bg)}
@@ -328,10 +331,12 @@ footer{border-top:1px solid var(--line);color:var(--mu-2);text-align:center;padd
 .js .reveal.on{opacity:1;transform:none}
 @supports (object-view-box: inset(0)){.face{object-view-box:inset(5% 13% 45% 27%)}}
 @media (max-height:760px){.hero{padding-top:16px}.hero .hand{display:none}.hero h1{font-size:35px;margin-top:14px}.kit{margin:18px auto 0;transform:scale(.86);transform-origin:50% 0;height:300px;margin-bottom:-22px}}
-@media (max-width:370px){.btn{font-size:15.5px;gap:10px;padding-left:16px;padding-right:16px}.doc{width:116px}.doc b{font-size:15.5px}.badge{font-size:11px;padding:6px 9px}.cd .u{min-width:70px}}
+@media (max-width:370px){.btn{font-size:15.5px;gap:10px;padding-left:16px;padding-right:16px}.badge{font-size:11px;padding:6px 9px}.doc{width:116px}.doc b{font-size:15.5px}.yq-t{font-size:26px}.yb{font-size:14.5px}.cd .u{min-width:70px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 <script>
+/* capa do produto: src/img/capa.jpg (versão leve). Se não achar, tenta a capapdoruto.png */
+function fotoCapa(i){var e=['src/img/capapdoruto.png','src/img/capa_produto.png','src/img/capaproduto.png','src/img/capapdoruto.jpg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
 /* foto da Elisa: src/img/elisa.jpg (versão leve). Se não achar, tenta a psicologaa.png e outros nomes parecidos */
 function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
 </script>
@@ -365,10 +370,6 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
     <a class="btn pulse" id="cta1" href="#offer">Quero ele de volta agora<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
     <p class="hint">Videoaulas + bônus + materiais · <b>acesso vitalício</b></p>
 
-    <div class="mydiag" id="myDiag" hidden>
-      <span class="ic">💌</span>
-      <div><small>Seu resultado</small><strong id="myPat"></strong><p id="myLine"></p></div>
-    </div>
   </div>
 </section>
 
@@ -400,20 +401,6 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
       <div class="ph-body" id="phBody"></div>
     </div></div>
     <p class="demo-cap">Cena ilustrativa · os prints reais tão logo abaixo</p>
-  </div>
-</section>
-
-<!-- ===== POR QUE ELE ESFRIOU ===== -->
-<section class="pad">
-  <div class="wrap reveal">
-    <p class="eyebrow">Por que ele esfriou</p>
-    <h2 class="h2">Homem não corre atrás do que <em>já tá garantido.</em></h2>
-    <ul class="lines">
-      <li><i>✕</i>Você responde na hora.</li>
-      <li><i>✕</i>Você tá sempre disponível.</li>
-      <li><i>✕</i>Você dá tudo antes dele se mexer.</li>
-    </ul>
-    <div class="inv"><small>A Inversão</small><p>Você para de entregar antes da hora. Ele sente o espaço. <b>E corre pra ocupar.</b></p></div>
   </div>
 </section>
 
@@ -455,7 +442,9 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
       <span><i>✓</i>Acesso vitalício</span>
     </div>
 
-    <!-- ÁUDIO REAL DE ALUNA (o áudio já vai dentro deste arquivo, não precisa subir nada) -->
+    <!-- ÁUDIO REAL DE ALUNA: toca o arquivo src/img/investimentoelisa.mp3.
+         Se trocar esse arquivo, o áudio do site muda junto. Se o arquivo não for achado,
+         toca a cópia que já vai dentro deste HTML (então nunca fica sem áudio). -->
     <div class="vn" id="vn">
       <p class="vn-lab">🎧 Áudio real de aluna</p>
       <p class="vn-q">"Sério Elisa, <b>esse foi o melhor investimento que eu fiz esse ano!</b>"</p>
@@ -478,19 +467,15 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
   </div>
 </section>
 
-<!-- ===== SE ELA FECHAR AGORA ===== -->
-<section class="pad loss">
-  <div class="wrap reveal">
-    <p class="eyebrow">Escuta</p>
-    <h2 class="h2">Se você fechar essa página, <em>amanhã vai ser igual.</em></h2>
-    <div class="tl">
-      <div class="st"><small>Hoje à noite</small><p>Você vai pegar o celular de novo. E não vai ter nada dele.</p></div>
-      <div class="st"><small>Essa semana</small><p>Ele aparece com um "oi sumida". E você responde na hora. De novo.</p></div>
-      <div class="st"><small>Daqui a 1 mês</small><p>Mesmo lugar. Mais cansada. E ele, mais acostumado.</p></div>
-    </div>
-    <div class="decide">
-      <p>Ou você muda isso <em>hoje.</em></p>
-      <a class="btn" href="#offer" data-jump>Eu quero mudar isso agora<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
+<!-- ===== 3 PERGUNTAS (3 respostas seguidas antes da oferta) ===== -->
+<section class="pad yes">
+  <div class="wrap">
+    <p class="eyebrow c">Responde rapidinho</p>
+    <h2 class="h2 c">Quanto isso tá <em>te custando?</em></h2>
+    <div class="costs"><span>Noites olhando o celular</span><span>Sua paz</span><span>Seu amor-próprio</span></div>
+    <div class="yq" id="yq" aria-live="polite">
+      <div class="yq-dots" id="yqDots"><i class="on"></i><i></i><i></i></div>
+      <div class="yq-body" id="yqBody"></div>
     </div>
   </div>
 </section>
@@ -508,6 +493,7 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
         <p class="cd-t" id="cdT">Essa condição sai do ar em</p>
         <div class="cd" aria-live="off"><div class="u"><b data-mm>14</b><small>min</small></div><span class="sep">:</span><div class="u"><b data-ss>34</b><small>seg</small></div></div>
       </div>
+      <img class="mini" src="src/img/capa.jpg" onerror="fotoCapa(this)" alt="O plano: videoaulas, bônus e materiais" width="1000" height="563" loading="lazy">
       <p class="kit-t">Seu kit</p>
       <ul class="olist">
         <li><i>✓</i><span><b>O Método</b></span><span class="t">videoaulas</span></li>
@@ -658,8 +644,6 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
   if(top){
     var p=PAT[top];
     $('heroPillTxt').innerHTML='Seu padrão: <strong></strong>';$('heroPillTxt').querySelector('strong').textContent=p.name;
-    $('myPat').textContent=p.name;$('myLine').textContent=p.line+' É exatamente isso que o plano te ensina a virar.';
-    $('myDiag').hidden=false;
     var fp=$('forPat');fp.querySelector('span').textContent='Feito pra quem tem o padrão '+p.name;fp.hidden=false;
   }
 
@@ -727,15 +711,25 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
     au.addEventListener('waiting',function(){box.classList.add('loading')});
     au.addEventListener('pause',function(){box.classList.remove('playing','loading');stopLoop()});
     au.addEventListener('ended',function(){box.classList.remove('playing','loading');au.currentTime=0;stopLoop()});
-    /* o áudio vai embutido no HTML: aparece sempre, mesmo sem a pasta src/audio */
-    var triedFile=false;
-    function useFile(){if(triedFile){box.hidden=true;return}triedFile=true;au.src='src/img/investimentoelisa.mp3';try{au.load()}catch(e){}}
-    au.addEventListener('error',useFile);
-    try{
-      var bin=atob(AUDIO_B64),buf=new Uint8Array(bin.length);
-      for(var k=0;k<bin.length;k++)buf[k]=bin.charCodeAt(k);
-      au.src=URL.createObjectURL(new Blob([buf],{type:'audio/mpeg'}));
-    }catch(e){useFile()}
+    /* arquivo do site: src/img/investimentoelisa.mp3. Cópia embutida como garantia */
+    var FILES=['src/img/investimentoelisa.mp3','src/audio/depoimento-aluna.mp3'],blobUrl='',onFile=false;
+    function useBlob(){
+      onFile=false;
+      if(!blobUrl){try{var bin=atob(AUDIO_B64),buf=new Uint8Array(bin.length);for(var k=0;k<bin.length;k++)buf[k]=bin.charCodeAt(k);blobUrl=URL.createObjectURL(new Blob([buf],{type:'audio/mpeg'}))}catch(e){box.hidden=true;return}}
+      if(au.src!==blobUrl){au.src=blobUrl;try{au.load()}catch(e){}}
+    }
+    useBlob();
+    au.addEventListener('error',function(){if(onFile)useBlob();else box.hidden=true});
+    function tryFile(k){
+      if(k>=FILES.length||!window.fetch)return;
+      fetch(FILES[k],{method:'HEAD',cache:'no-store'}).then(function(r){
+        var ct=(r.headers.get('content-type')||'').toLowerCase();
+        if(r.ok&&(ct.indexOf('audio')>-1||ct.indexOf('mpeg')>-1)){
+          if(au.paused&&au.currentTime===0){onFile=true;au.src=FILES[k];try{au.load()}catch(e){}}
+        }else tryFile(k+1);
+      }).catch(function(){tryFile(k+1)});
+    }
+    tryFile(0);
     $('vnPlay').addEventListener('click',function(){
       if(au.paused){
         try{if(navigator.vibrate)navigator.vibrate(8)}catch(e){}
@@ -807,6 +801,39 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
   pr.querySelectorAll('img').forEach(function(im){im.addEventListener('click',function(){lbImg.src=this.currentSrc||this.src;lbImg.alt=this.alt;lb.classList.add('on')})});
   lb.addEventListener('click',function(){lb.classList.remove('on')});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+
+  /* ===== 3 perguntas: ela responde 3 vezes seguidas antes de ver a oferta ===== */
+  (function(){
+    var Q=[
+      {t:'Você tá cansada de ser a que corre atrás?',y:'Sim, cansei',n:'Ainda não',ry:'Eu sei. Cansa fazer a parte de dois.',rn:'Mesmo assim você chegou até aqui. Algo te incomoda.'},
+      {t:'Você quer continuar desse jeito?',y:'Não, chega',n:'Tanto faz',ry:'Então não dá pra fazer igual e esperar outro final.',rn:'Se nada mudar, ele também não muda.'},
+      {t:'Quer saber como fazer ele correr atrás de você?',y:'Sim, eu quero',n:'Talvez',ry:'Então vem. Tá tudo logo aqui embaixo.',rn:'Dá uma olhada. Você tem 30 dias pra testar sem risco.'}
+    ];
+    var body=$('yqBody'),dots=$('yqDots').querySelectorAll('i'),i=0;
+    function dotsAt(k){for(var d=0;d<dots.length;d++)dots[d].className=d<k?'ok':(d===k?'on':'')}
+    function step(){
+      var q=Q[i];dotsAt(i);
+      body.innerHTML='<div class="yq-step"><p class="yq-n">'+(i+1)+' de 3</p><p class="yq-t"></p><div class="yq-o"><button type="button" class="yb main"></button><button type="button" class="yb alt"></button></div><p class="yq-r" hidden></p></div>';
+      body.querySelector('.yq-t').textContent=q.t;
+      var bs=body.querySelectorAll('.yb'),o=body.querySelector('.yq-o'),r=body.querySelector('.yq-r');
+      bs[0].textContent=q.y;bs[1].textContent=q.n;
+      function pick(main){
+        if(o.classList.contains('done'))return;
+        try{if(navigator.vibrate)navigator.vibrate(10)}catch(e){}
+        o.classList.add('done');(main?bs[0]:bs[1]).classList.add('pick');
+        r.textContent=main?q.ry:q.rn;r.hidden=false;
+        setTimeout(function(){i++;if(i<Q.length)step();else end()},reduce?200:1250);
+      }
+      bs[0].addEventListener('click',function(){pick(true)});
+      bs[1].addEventListener('click',function(){pick(false)});
+    }
+    function end(){
+      dotsAt(3);
+      body.innerHTML='<div class="yq-step yq-end"><p class="ok3">✓ 3 de 3</p><p>Então o seu próximo passo <em>tá logo aqui.</em></p><a class="btn pulse" href="#offer" id="yqGo">Ver minha condição<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a></div>';
+      $('yqGo').addEventListener('click',goOffer);
+    }
+    step();
+  })();
 
   /* botões que descem até a oferta (só quando ela toca) */
   function goOffer(e){
