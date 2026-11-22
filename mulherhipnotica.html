@@ -729,7 +729,7 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
     au.addEventListener('ended',function(){box.classList.remove('playing','loading');au.currentTime=0;stopLoop()});
     /* o áudio vai embutido no HTML: aparece sempre, mesmo sem a pasta src/audio */
     var triedFile=false;
-    function useFile(){if(triedFile){box.hidden=true;return}triedFile=true;au.src='src/audio/depoimento-aluna.mp3';try{au.load()}catch(e){}}
+    function useFile(){if(triedFile){box.hidden=true;return}triedFile=true;au.src='src/img/investimentoelisa.mp3';try{au.load()}catch(e){}}
     au.addEventListener('error',useFile);
     try{
       var bin=atob(AUDIO_B64),buf=new Uint8Array(bin.length);
