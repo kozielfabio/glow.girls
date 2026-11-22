@@ -6,6 +6,12 @@
 <title>O plano pra ele voltar a correr atrás de você</title>
 <meta name="description" content="O plano de 7 dias pra ele voltar a correr atrás de você. Sem implorar, sem joguinho.">
 <meta name="theme-color" content="#0E0A09">
+<!-- Pixel da Meta -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1208952827491954');
+fbq('track','PageView');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -344,6 +350,7 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
 </script>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1208952827491954&amp;ev=PageView&amp;noscript=1"></noscript>
 
 <div class="tbar" id="tbar"><span id="tbarTxt">⏳ Sua condição especial expira em</span> <b data-clock>14:34</b></div>
 
@@ -686,6 +693,18 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
     }
   }
   tick();
+
+  /* Pixel: viu a oferta e tocou pra comprar (a compra em si é marcada no checkout) */
+  function preco(){return (ended&&CHECKOUT_CHEIO)?97:27.9}
+  try{if(typeof fbq==='function')fbq('track','ViewContent',{content_name:'Plano 7 dias',value:preco(),currency:'BRL'})}catch(e){}
+  var icSent=false;
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[data-checkout]'):null;
+    if(!a||!a.getAttribute('href')||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey)return;
+    var href=a.href,gone=false;
+    function go(){if(gone)return;gone=true;location.href=href}
+    try{if(!icSent&&typeof fbq==='function'){icSent=true;fbq('track','InitiateCheckout',{content_name:'Plano 7 dias',value:preco(),currency:'BRL'});e.preventDefault();setTimeout(go,250)}}catch(x){}
+  });
 
   /* vídeo: some enquanto não tiver o código do player */
   if(!$('vslBox').querySelector('*'))$('vslSec').hidden=true;
