@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Seu teste · 2 minutos</title>
 <meta name="theme-color" content="#0E0A09">
+<!-- Pixel da Meta -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1208952827491954');
+fbq('track','PageView');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -123,6 +129,7 @@ input[type=range]::-moz-range-thumb{width:34px;height:34px;border-radius:50%;bor
 </style>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1208952827491954&amp;ev=PageView&amp;noscript=1"></noscript>
 <div class="glow" aria-hidden="true"></div>
 
 <div class="top" id="top">
@@ -327,6 +334,7 @@ input[type=range]::-moz-range-thumb{width:34px;height:34px;border-radius:50%;bor
   function finish(){
     if(leaving)return;leaving=true;hideDock();
     var res=compute();store.set('pif_result',JSON.stringify(res));
+    try{if(typeof fbq==='function')fbq('track','Lead',{content_name:'Teste concluído'})}catch(e){}
     $('top').hidden=true;stage.hidden=true;
     var lo=$('loading');lo.hidden=false;window.scrollTo(0,0);
     if(name)$('loTitle').innerHTML=esc(name)+', montando seu <em>resultado…</em>';
