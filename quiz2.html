@@ -130,8 +130,8 @@ input[type=range]::-moz-range-thumb{width:34px;height:34px;border-radius:50%;bor
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 <script>
-/* foto da Elisa: src/img/elisa-rosto.jpg (rosto recortado). Se não achar, usa a psicologaa.png */
-function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
+/* foto da Elisa: src/img/elisa-perfil.jpg. Se não achar, usa a elisa-rosto.jpg ou a psicologaa.png */
+function fotoExpert(i){var e=['src/img/elisa-rosto.jpg','src/img/psicologaa.png','src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
 </script>
 </head>
 <body>
@@ -142,7 +142,7 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
   <div class="top-in">
     <div class="top-row">
       <button class="back" id="back" type="button" aria-label="Voltar para a pergunta anterior" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
-      <div class="who"><img class="face" src="src/img/elisa-rosto.jpg" onerror="fotoExpert(this)" alt="" width="30" height="30"><span id="whoTxt">Seu diagnóstico com a Elisa</span></div>
+      <div class="who"><img class="face" src="src/img/elisa-perfil.jpg" onerror="fotoExpert(this)" alt="" width="30" height="30"><span id="whoTxt">Seu diagnóstico com a Elisa</span></div>
       <span class="count" id="count">1 de 4</span>
     </div>
     <div class="bar"><span id="fill"></span></div>
@@ -154,7 +154,7 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
 <div class="dock" id="dock" aria-live="polite">
   <div class="dock-in">
     <div class="eli">
-      <img class="face" src="src/img/elisa-rosto.jpg" onerror="fotoExpert(this)" alt="" width="34" height="34">
+      <img class="face" src="src/img/elisa-perfil.jpg" onerror="fotoExpert(this)" alt="" width="34" height="34">
       <div class="bub" id="bub"><small>Elisa</small><div class="dots"><i></i><i></i><i></i></div></div>
     </div>
     <button class="btn" id="nextBtn" type="button">Continuar<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
@@ -163,7 +163,7 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
 
 <section class="loading" id="loading" hidden aria-live="polite">
   <div class="ring">
-    <img class="face" src="src/img/elisa-rosto.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="108" height="108">
+    <img class="face" src="src/img/elisa-perfil.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="108" height="108">
     <svg width="132" height="132" viewBox="0 0 132 132" aria-hidden="true"><circle class="bg" cx="66" cy="66" r="62"/><circle class="fg" id="ringFg" cx="66" cy="66" r="62"/></svg>
   </div>
   <h2 id="loTitle">Lendo suas <em>respostas…</em></h2>
