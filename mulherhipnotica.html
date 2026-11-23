@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Elisa Koscziol · Psicóloga</title>
+<title>Elisa Koscziol · Especialista em relacionamentos</title>
 <meta name="description" content="Faça ele voltar a correr atrás de você. Sem implorar, sem joguinho, sem se diminuir.">
 <meta name="theme-color" content="#FBF7F3">
 <!-- Pixel da Meta -->
@@ -48,7 +48,8 @@ section{position:relative}
 .btn{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:20px 22px;border-radius:99px;border:0;cursor:pointer;background:linear-gradient(135deg,#BE6C84 0%,var(--rose) 55%,var(--rose-deep) 100%);color:#fff;font-weight:800;font-size:17px;letter-spacing:.01em;text-decoration:none;text-align:center;line-height:1.2;box-shadow:0 18px 32px -16px rgba(142,61,87,.85),inset 0 1px 0 rgba(255,255,255,.25);overflow:hidden}
 .btn::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.3) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.2s 1s infinite;pointer-events:none}
 @keyframes shine{0%{transform:translateX(-120%)}35%,100%{transform:translateX(120%)}}
-.btn:active{opacity:.92}
+.btn:active{opacity:.94;transform:scale(.985)}
+a,button,summary{-webkit-tap-highlight-color:transparent}
 .btn .arr{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;flex-shrink:0}
 .btn.pulse{animation:pulse 2.1s 1.2s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 18px 32px -16px rgba(142,61,87,.85),0 0 0 0 rgba(194,112,138,.5)}50%{box-shadow:0 18px 32px -16px rgba(142,61,87,.85),0 0 0 12px rgba(194,112,138,0)}}
@@ -232,7 +233,7 @@ section{position:relative}
 .kv-th img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
 .kv-th .pl{position:absolute;left:50%;top:50%;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;color:var(--rose)}
 .kv-th .pl svg{margin-left:2px}
-.kv-th.bonus img{filter:sepia(.5) saturate(.8) brightness(.55)}
+.kv-th.bonus img{filter:saturate(.85) brightness(.6)}
 .kv-th .pl.g{background:var(--gold-soft);color:#3A2A26}
 .kv .tg{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;border-radius:99px;padding:2px 9px;margin-bottom:4px}
 .kv .tg.v{background:#EFE3F7;color:#7A4A9A}
@@ -255,6 +256,10 @@ section{position:relative}
 .kc.inf{background:linear-gradient(160deg,#FBF1E3,#F3E3CB);color:var(--gold-ink);box-shadow:0 14px 22px -16px rgba(60,30,25,.45);align-items:center;justify-content:center;text-align:center;gap:2px;padding:10px}
 .kc.inf span{font-size:38px;line-height:1;font-weight:800}
 .kc.inf b{font-size:14px;color:var(--ink)}
+.lastp{padding-top:10px;padding-bottom:6px}
+.lp{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:14px;box-shadow:0 16px 30px -24px rgba(110,60,50,.7)}
+.lp figcaption{font-family:'Caveat',cursive;font-size:25px;line-height:1.15;color:var(--rose-deep);margin:0 4px 10px}
+.lp img{width:100%;border-radius:14px;border:1px solid var(--line)}
 .why{margin-top:10px;font-size:12.5px;font-weight:600;line-height:1.45;color:rgba(246,237,230,.72)}
 
 /* oferta */
@@ -334,8 +339,8 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;color:va
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 <script>
-/* foto da Elisa: src/img/elisa-rosto.jpg (rosto recortado). Se não achar, usa a psicologaa.png */
-function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
+/* foto da Elisa: src/img/elisa-perfil.jpg. Se não achar, usa a elisa-rosto.jpg ou a psicologaa.png */
+function fotoExpert(i){var e=['src/img/elisa-rosto.jpg','src/img/elisa.jpg','src/img/psicologaa.png','src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
 /* capa do produto: src/img/capa.jpg (versão leve). Se não achar, usa a capapdoruto.png */
 function fotoCapa(i){var e=['src/img/capapdoruto.png','src/img/capa_produto.png','src/img/capaproduto.png','src/img/capa-produto.png','src/img/capapdoruto.jpg','src/img/capa_produto.jpg','src/img/capaproduto.jpg','src/img/capapdoruto.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
 </script>
@@ -349,15 +354,15 @@ function fotoCapa(i){var e=['src/img/capapdoruto.png','src/img/capa_produto.png'
 <!-- ===== HERO: promessa + botão (o preço só aparece na oferta) ===== -->
 <section class="hero">
   <div class="wrap">
-    <div class="pill" id="heroPill"><img src="src/img/elisa-rosto.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="26" height="26"><span id="heroPillTxt">Elisa Koscziol · Psicóloga</span></div>
+    <div class="pill" id="heroPill"><img src="src/img/elisa-perfil.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="26" height="26"><span id="heroPillTxt">Elisa Koscziol · Especialista em relacionamentos</span></div>
     <span class="hand" id="heroHand">lê isso até o final 🤍</span>
     <h1>Ele não esfriou do nada. <em>E se continuar assim, não vai mudar.</em></h1>
     <p class="sub">Você já tentou do seu jeito. <strong>O que falta é o método.</strong></p>
 
     <div class="trio" aria-hidden="true">
       <div class="tp l"><div class="scr doc-scr">
-        <small>Material · PDF</small>
-        <b>Guia de Mensagens Magnéticas</b>
+        <small>Aula 02</small>
+        <b>Mensagens Magnéticas</b>
         <i class="ln"></i><i class="ln s"></i>
         <span class="tagx no">✕ O que nunca mandar</span>
         <i class="ln"></i><i class="ln s"></i>
@@ -365,7 +370,7 @@ function fotoCapa(i){var e=['src/img/capapdoruto.png','src/img/capa_produto.png'
         <i class="ln"></i><i class="ln"></i><i class="ln s"></i>
       </div></div>
       <div class="tp c"><div class="scr">
-        <div class="vid"><img src="src/img/elisa.jpg" onerror="fotoExpert(this)" alt="" width="136" height="138"><span class="play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span><span class="prog"><i></i></span></div>
+        <div class="vid"><img src="src/img/elisa-natural.jpg" onerror="fotoExpert(this)" alt="" width="136" height="138"><span class="play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span><span class="prog"><i></i></span></div>
         <div class="les"><small>Videoaula 1</small><b>A Inversão</b>
           <ul><li><i>▶</i>Por que ele esfriou</li><li><i>▶</i>O que nunca mandar</li><li><i>▶</i>O Código da Mulher Hipnótica</li></ul>
         </div>
@@ -380,12 +385,12 @@ function fotoCapa(i){var e=['src/img/capapdoruto.png','src/img/capa_produto.png'
         </div>
       </div></div>
       <span class="badge b2"><i>▶</i> Videoaulas</span>
-      <span class="badge b1"><i>✦</i> 7 materiais</span>
+      <span class="badge b1"><i>✦</i> +7 aulas</span>
       <span class="badge b3"><i>∞</i> Vitalício</span>
     </div>
 
     <a class="btn pulse" id="cta1" href="#offer">Quero ele de volta agora<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
-    <p class="hint">Videoaulas + materiais + bônus · <b>acesso vitalício</b></p>
+    <p class="hint">Videoaulas + bônus · <b>acesso vitalício</b></p>
   </div>
 </section>
 
@@ -431,21 +436,21 @@ function fotoCapa(i){var e=['src/img/capapdoruto.png','src/img/capa_produto.png'
     <h2 class="h2">O método completo pra <em>virar o jogo.</em></h2>
     <div class="kv">
       <div class="kv-th"><img src="src/img/capa.jpg" alt="" width="118" height="78" loading="lazy" style="object-position:50% 50%"><span class="pl"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span></div>
-      <div><span class="tg v">Videoaulas</span><strong>O Método da Elisa</strong><p>A psicóloga te guia, passo a passo, pra virar a dinâmica.</p></div>
+      <div><span class="tg v">Videoaulas</span><strong>O Método da Elisa</strong><p>A Elisa te guia, passo a passo, pra virar a dinâmica.</p></div>
     </div>
     <div class="kv">
-      <div class="kv-th bonus"><img src="src/img/elisa.jpg" onerror="fotoExpert(this)" alt="" width="118" height="78" loading="lazy"><span class="pl g"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span></div>
+      <div class="kv-th bonus"><img src="src/img/elisa-natural.jpg" onerror="fotoExpert(this)" alt="" width="118" height="78" loading="lazy"><span class="pl g"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5z"/></svg></span></div>
       <div><span class="tg b">Bônus em vídeo</span><strong>O Código da Mulher Hipnótica</strong><p>A postura e a presença que deixam ele sem conseguir te esquecer.</p></div>
     </div>
-    <p class="kg-t">+ 7 materiais em PDF</p>
+    <p class="kg-t">+ 7 aulas</p>
     <div class="kgrid">
-      <div class="kc c1"><small>PDF</small><b>Roteiro da Reconquista</b></div>
-      <div class="kc c2"><small>PDF</small><b>Guia de Mensagens Magnéticas</b></div>
-      <div class="kc c3"><small>PDF</small><b>Plano de 7 Dias de Inversão</b></div>
-      <div class="kc c2"><small>PDF</small><b>Scripts de Reposicio&shy;namento</b></div>
-      <div class="kc c3"><small>PDF</small><b>Biblioteca de Respostas de Poder</b></div>
-      <div class="kc c1"><small>PDF</small><b>Controle Emocional Feminino</b></div>
-      <div class="kc c3"><small>PDF</small><b>Diagnóstico Avançado</b></div>
+      <div class="kc c1"><small>Aula 01</small><b>Roteiro da Reconquista</b></div>
+      <div class="kc c2"><small>Aula 02</small><b>Mensagens Magnéticas</b></div>
+      <div class="kc c3"><small>Aula 03</small><b>Plano de 7 Dias de Inversão</b></div>
+      <div class="kc c2"><small>Aula 04</small><b>Scripts de Reposicio&shy;namento</b></div>
+      <div class="kc c3"><small>Aula 05</small><b>Respostas de Poder</b></div>
+      <div class="kc c1"><small>Aula 06</small><b>Controle Emocional Feminino</b></div>
+      <div class="kc c3"><small>Aula 07</small><b>Diagnóstico Avançado</b></div>
       <div class="kc mys"><span>?</span><b>Bônus surpresa</b></div>
       <div class="kc inf"><span>∞</span><b>Acesso vitalício</b></div>
     </div>
@@ -465,11 +470,11 @@ function fotoCapa(i){var e=['src/img/capapdoruto.png','src/img/capa_produto.png'
         <p class="cd-t" id="cdT">Essa condição sai do ar em</p>
         <div class="cd" aria-live="off"><div class="u"><b data-mm>14</b><small>min</small></div><span class="sep">:</span><div class="u"><b data-ss>34</b><small>seg</small></div></div>
       </div>
-      <img class="mini" src="src/img/capa.jpg" onerror="fotoCapa(this)" alt="Elisa Koscziol, psicóloga" width="340" height="191" loading="lazy">
+      <img class="mini" src="src/img/capa.jpg" onerror="fotoCapa(this)" alt="Elisa Koscziol" width="340" height="191" loading="lazy">
       <ul class="olist">
         <li><i>✓</i><span><b>Videoaulas:</b> O Método da Elisa</span></li>
         <li><i>✓</i><span><b>Bônus:</b> O Código da Mulher Hipnótica</span></li>
-        <li><i>✓</i><span><b>7 materiais em PDF</b>, do Roteiro da Reconquista ao Diagnóstico Avançado</span></li>
+        <li><i>✓</i><span><b>+7 aulas</b>, do Roteiro da Reconquista ao Diagnóstico Avançado</span></li>
         <li><i>✓</i><span>Bônus surpresa 🤫 + <b>acesso vitalício</b></span></li>
       </ul>
       <div class="price dark pricepop" data-price id="oprice">
@@ -506,11 +511,11 @@ function fotoCapa(i){var e=['src/img/capapdoruto.png','src/img/capa_produto.png'
 <section class="pad recado">
   <div class="wrap reveal">
     <div class="note-in">
-      <img class="face" src="src/img/elisa-rosto.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="64" height="64" loading="lazy">
+      <img class="face" src="src/img/elisa-perfil.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="64" height="64" loading="lazy">
       <div>
         <p id="noteTxt">Você não é difícil de amar. Você só aprendeu a amar primeiro. <b>Agora você vai aprender a fazer ele chegar até você.</b></p>
         <p class="sig">Elisa</p>
-        <p class="sig-sub">Elisa Koscziol · Psicóloga</p>
+        <p class="sig-sub">Elisa Koscziol · Especialista em relacionamentos</p>
       </div>
     </div>
   </div>
@@ -523,13 +528,22 @@ function fotoCapa(i){var e=['src/img/capapdoruto.png','src/img/capa_produto.png'
     <h2 class="h2">Pode perguntar, <em>amiga.</em></h2>
     <div class="faq">
       <details><summary>Por que um valor tão baixo por tudo isso?<i>+</i></summary><p>Porque essa é a condição especial de quem fez o diagnóstico, e a ideia é que mais mulheres consigam sair desse padrão. Ela vale por tempo limitado: quando o tempo acaba, sai do ar.</p></details>
-      <details><summary>Funciona se a gente já terminou?<i>+</i></summary><p>Sim. Tem um material feito só pra isso, o Roteiro da Reconquista. O método trabalha o padrão que afastou ele, porque é ele que precisa mudar pra história ter outro final.</p></details>
+      <details><summary>Funciona se a gente já terminou?<i>+</i></summary><p>Sim. Tem uma aula feita só pra isso, o Roteiro da Reconquista. O método trabalha o padrão que afastou ele, porque é ele que precisa mudar pra história ter outro final.</p></details>
       <details><summary>Vou ter que fazer joguinho ou ignorar ele?<i>+</i></summary><p>Não. Você não vai sumir de propósito nem fingir que não liga. Vai parar de entregar tudo antes da hora. E isso você faz sendo você mesma.</p></details>
       <details><summary>Como eu recebo?<i>+</i></summary><p>Tudo é digital. Assim que o pagamento é aprovado, o acesso chega no seu e-mail. No Pix, a aprovação costuma sair em segundos.</p></details>
-      <details><summary>Preciso de muito tempo?<i>+</i></summary><p>Não. Você assiste e lê pelo celular, no seu ritmo, quando quiser. O acesso é seu pra sempre.</p></details>
+      <details><summary>Preciso de muito tempo?<i>+</i></summary><p>Não. Você faz tudo pelo celular, no seu ritmo, quando quiser. O acesso é seu pra sempre.</p></details>
       <details><summary>Pagar no Pix é seguro?<i>+</i></summary><p>Sim. O pagamento é feito numa plataforma segura: você copia o código Pix (ou escaneia o QR Code) no app do seu banco e pronto.</p></details>
       <details><summary>E se não funcionar pra mim?<i>+</i></summary><p>Você tem 30 dias de garantia. Pediu o reembolso dentro do prazo, recebe 100% do seu dinheiro de volta.</p></details>
     </div>
+  </div>
+</section>
+
+<!-- ===== PRINT DE ALUNA (fim da página) ===== -->
+<section class="pad lastp">
+  <div class="wrap reveal">
+    <p class="eyebrow">Print real de aluna</p>
+    <h2 class="h2">5 dias sem falar. <em>Aí ele apareceu.</em></h2>
+    <figure class="lp"><figcaption>"Que aulas incríveis, virada de chave" 🙌</figcaption><img src="src/img/print1.jpeg" alt="Print de aluna: depois de 5 dias sem comunicação, ele mandou mensagem perguntando se ela estava brava e disse sumida" width="888" height="832" loading="lazy"></figure>
   </div>
 </section>
 
@@ -549,7 +563,7 @@ function fotoCapa(i){var e=['src/img/capapdoruto.png','src/img/capa_produto.png'
 
 <footer>
   <em>Elisa Koscziol</em>
-  Psicóloga · © 2026 · Todos os direitos reservados.<br>
+  Especialista em relacionamentos · © 2026 · Todos os direitos reservados.<br>
   Conteúdo educativo. Não substitui acompanhamento psicológico.<br>Em situação de violência, ligue 180.
   <!-- Termos de uso, Política de privacidade e Contato: colocar os links aqui -->
 </footer>
