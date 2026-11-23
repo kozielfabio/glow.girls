@@ -402,6 +402,7 @@ footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;color:va
 /* imagens: usa o arquivo de src/img. Se não achar (pasta não subiu ou página aberta no computador), usa a cópia embutida no fim da página */
 function emb(i){var k=i.getAttribute('data-emb')||(i.getAttribute('src')||'').split('/').pop().replace(/\.[^.]+$/,'');if(i.__e)return;var D=window.__EMB;if(!D){(window.__q=window.__q||[]).push(i);return}if(D[k]){i.__e=1;i.src=D[k]}}
 </script>
+<link rel="preconnect" href="https://pay.cakto.com.br">
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1208952827491954&amp;ev=PageView&amp;noscript=1"></noscript>
@@ -575,13 +576,13 @@ function emb(i){var k=i.getAttribute('data-emb')||(i.getAttribute('src')||'').sp
       </ul>
       <div class="price dark pricepop" data-price id="oprice">
         <p class="reveal-t">Seu valor hoje</p>
-        <div class="row1"><span>De <s class="strike">R$ 97</s></span><span class="off">71% OFF</span></div>
-        <div class="big"><span class="cu">R$</span><span class="v">27</span><span class="d">,90</span></div>
+        <div class="row1"><span>De <s class="strike">R$ 97</s></span><span class="off">82% OFF</span></div>
+        <div class="big"><span class="cu">R$</span><span class="v">17</span><span class="d">,00</span></div>
         <p class="note">pagamento único · <b>menos de R$ 1 por dia</b></p>
         <p class="why" data-why>Por que tão barato? É a condição de quem fez o diagnóstico. Quando o tempo acaba, ela sai do ar.</p>
       </div>
       <a class="btn pulse" href="https://pay.cakto.com.br/nv3yhih_1361761" data-checkout>Quero ele de volta agora<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <span class="save" data-save>Você economiza R$ 69,10 hoje</span>
+      <span class="save" data-save>Você economiza R$ 80,00 hoje</span>
       <div class="pay dark">
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2l4.5 4.5L12 11 7.5 6.5zM12 13l4.5 4.5L12 22l-4.5-4.5zM6.5 7.5L11 12l-4.5 4.5L2 12zM17.5 7.5L22 12l-4.5 4.5L13 12z"/></svg>Pix ou cartão</span>
         <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Compra segura</span>
@@ -651,8 +652,8 @@ function emb(i){var k=i.getAttribute('data-emb')||(i.getAttribute('src')||'').sp
     <p class="pre" id="finalPre">Ou você continua esperando ele responder…</p>
     <h2 class="q">…ou faz ele <em>esperar por você.</em></h2>
     <div class="price" data-price>
-      <div class="row1"><span>De <s>R$ 97</s></span><span class="off">71% OFF</span></div>
-      <div class="big"><span class="cu">R$</span><span class="v">27</span><span class="d">,90</span></div>
+      <div class="row1"><span>De <s>R$ 97</s></span><span class="off">82% OFF</span></div>
+      <div class="big"><span class="cu">R$</span><span class="v">17</span><span class="d">,00</span></div>
     </div>
     <a class="btn pulse" id="ctaFinal" href="https://pay.cakto.com.br/nv3yhih_1361761" data-checkout>Quero ele de volta agora<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     <div class="timer" data-timer>⏳ Sai do ar em <b data-clock>14:34</b></div>
@@ -765,7 +766,7 @@ function emb(i){var k=i.getAttribute('data-emb')||(i.getAttribute('src')||'').sp
   tick();
 
   /* Pixel: viu a oferta e tocou pra comprar (a compra em si é marcada no checkout) */
-  function preco(){return (ended&&CHECKOUT_CHEIO)?97:27.9}
+  function preco(){return (ended&&CHECKOUT_CHEIO)?97:17}
   try{if(typeof fbq==='function')fbq('track','ViewContent',{content_name:'Plano 7 dias',value:preco(),currency:'BRL'})}catch(e){}
   var icSent=false;
   document.addEventListener('click',function(e){
