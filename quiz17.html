@@ -36,6 +36,7 @@ img{display:block;max-width:100%;height:auto}
 .brand i{width:22px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));flex-shrink:0}
 .brand i:last-child{background:linear-gradient(90deg,var(--gold),transparent)}
 .brand span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);font-weight:700;white-space:nowrap}
+@media (max-width:440px){.brand i{display:none}.brand span{font-size:9.5px;letter-spacing:.1em}}
 .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);font-weight:800;margin-bottom:12px}
 .eyebrow.light{color:var(--gold-soft)}
 h2.h{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(32px,8.6vw,40px);line-height:1.03;letter-spacing:-.01em;margin-bottom:12px}
@@ -139,46 +140,61 @@ h2.h em{font-style:italic;color:var(--rose)}
 .yes{background:var(--sand)}
 .costs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:4px 0 22px}
 .costs span{font-size:13.5px;font-weight:700;color:#9B3A4A;background:#FFF1F1;border:1px solid #F2C9CF;border-radius:99px;padding:7px 12px}
-.yq{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:20px 18px 22px;box-shadow:var(--shadow);min-height:236px}
-.yq-dots{display:flex;justify-content:center;gap:7px;margin-bottom:14px}
-.yq-dots i{width:8px;height:8px;border-radius:99px;background:rgba(42,30,27,.12);transition:all .3s}
-.yq-dots i.on{width:26px;background:var(--rose)}
-.yq-dots i.ok{background:#3F8F5E}
-.yq-step{animation:yIn .4s cubic-bezier(.2,.8,.2,1) backwards}
-@keyframes yIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
-.yq-n{text-align:center;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--gold-ink);margin-bottom:6px}
-.yq-t{text-align:center;font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:29px;line-height:1.08;margin-bottom:18px;color:var(--ink)}
-.yq-o{display:grid;grid-template-columns:1.5fr 1fr;gap:9px}
-.yb{border:0;border-radius:16px;padding:16px 10px;font-family:inherit;font-size:15.5px;font-weight:800;cursor:pointer;transition:transform .15s,opacity .2s}
-.yb:active{transform:scale(.97)}
-.yb.main{background:linear-gradient(135deg,#BE6C84,var(--rose) 55%,var(--rose-deep));color:#fff;box-shadow:0 14px 26px -12px rgba(142,61,87,.7)}
-.yb.alt{background:var(--cream);color:var(--cocoa);border:1px solid var(--line)}
-.yq-o.done .yb{pointer-events:none;opacity:.35}
-.yq-o.done .yb.pick{opacity:1}
-.yq-r{min-height:24px;margin-top:14px;text-align:center;font-size:15px;font-weight:700;color:var(--rose-deep);animation:yIn .35s backwards}
-.yq-end{text-align:center}
-.yq-end .yq-how{font-family:'Manrope',system-ui,sans-serif;font-size:15px;font-weight:600;line-height:1.45;color:var(--cocoa);margin:-6px 0 16px}
-.yq-step.emo .yq-t{font-style:italic}
-.yq-step.emo .yq-n{color:#9B3A4A}
-.yq-end .ok3{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#3F8F5E;margin-bottom:8px}
-.yq-end p{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:30px;line-height:1.08;margin-bottom:16px;color:var(--ink)}
-.yq-end p em{font-style:italic;color:var(--rose)}
+/* conversa sim / não */
+.cv{background:var(--paper);border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:var(--shadow);margin-top:6px}
+.cv-top{display:flex;align-items:center;gap:10px;padding:11px 14px;background:#fff;border-bottom:1px solid var(--line)}
+.cv-top img{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:50% 30%}
+.cv-who{flex:1;min-width:0;line-height:1.2}
+.cv-who b{display:block;font-size:15px}
+.cv-who span{font-size:12px;color:#3F8F5E;font-weight:700}
+.cv-who span.typing{color:var(--rose)}
+.cv-n{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);background:var(--cream);border:1px solid var(--line);border-radius:99px;padding:4px 10px;transition:color .3s}
+.cv-body{height:clamp(220px,calc(100svh - 520px),380px);overflow-y:auto;padding:14px 12px 10px;display:flex;flex-direction:column;gap:6px;background:#F4ECE6;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.cv-body::before{content:'';margin-top:auto}
+.cm{max-width:84%;padding:9px 12px;border-radius:17px;font-size:15px;line-height:1.38;color:var(--ink);animation:cmIn .38s cubic-bezier(.2,.8,.2,1) both}
+.cm.her{align-self:flex-start;background:#fff;border-bottom-left-radius:5px;box-shadow:0 1px 1px rgba(60,30,25,.06)}
+.cm.her.q{font-weight:700}
+.cm.her.q.emo{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-style:italic;line-height:1.2;font-weight:700;color:var(--rose-deep)}
+.cm.me{align-self:flex-end;background:#F3D6DC;border-bottom-right-radius:5px;font-weight:700}
+.cm b{color:var(--rose-deep)}
+.cm.dots{display:flex;gap:4px;padding:13px 14px}
+.cm.dots i{width:7px;height:7px;border-radius:50%;background:#C9B4AA;animation:dt 1.1s infinite}
+.cm.dots i:nth-child(2){animation-delay:.15s}.cm.dots i:nth-child(3){animation-delay:.3s}
+@keyframes dt{0%,60%,100%{transform:translateY(0);opacity:.55}30%{transform:translateY(-4px);opacity:1}}
+@keyframes cmIn{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+.cv-ans{padding:12px;display:grid;gap:9px;background:var(--paper);border-top:1px solid var(--line);min-height:142px;align-content:center}
+.cv-ans .hint{text-align:center;font-size:12.5px;font-weight:700;color:var(--cocoa);opacity:.75}
+.ab{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:0;border-radius:16px;padding:15px 12px;font-family:inherit;font-size:17px;font-weight:800;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .16s,opacity .25s,box-shadow .25s;animation:cmIn .35s cubic-bezier(.2,.8,.2,1) both}
+.ab:active{transform:scale(.97)}
+.ab.sim{background:linear-gradient(135deg,#BE6C84,var(--rose) 55%,var(--rose-deep));color:#fff;box-shadow:0 14px 26px -12px rgba(142,61,87,.7)}
+.ab.nao{background:#fff;color:var(--ink);border:1.5px solid var(--line);animation-delay:.06s}
+.ab .em{font-size:20px;line-height:1}
+.cv-ans .btn{animation:cmIn .45s cubic-bezier(.2,.8,.2,1) both}
+.cv-ans .btn-sub{margin-top:-2px}
+#stepB:not([hidden]){animation:stepIn .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes stepIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.zoom{display:block;position:relative;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.zoom-tip{position:absolute;right:10px;bottom:10px;background:rgba(42,30,27,.78);color:#fff;font-size:11.5px;font-weight:700;border-radius:99px;padding:5px 10px}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(20,14,12,.92);display:flex;align-items:center;justify-content:center;padding:18px;opacity:0;pointer-events:none;transition:opacity .25s}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-width:100%;max-height:92vh;border-radius:14px}
+.lb button{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:18px}
 
 footer{margin-top:44px;text-align:center;font-size:12px;color:var(--cocoa);opacity:.85}
 footer em{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;color:var(--gold-ink);display:block;margin-bottom:4px}
-@media (max-width:370px){.yq-t{font-size:26px}.yb{font-size:14.5px}.vn-q{font-size:24px}}
+@media (max-width:370px){.cm{font-size:14.5px}.ab{font-size:16px;padding:14px 12px}.vn-q{font-size:24px}.brand span{font-size:9px;letter-spacing:.08em}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
 <script>
-/* foto da Elisa: src/img/elisa-rosto.jpg (rosto recortado). Se não achar, usa a psicologaa.png */
-function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
+/* foto da Elisa: src/img/elisa-perfil.jpg. Se não achar, usa a elisa-rosto.jpg ou a psicologaa.png */
+function fotoExpert(i){var e=['src/img/elisa-rosto.jpg','src/img/psicologaa.png','src/img/psicologa.png','src/img/psicologaa.jpg','src/img/psicologa.jpg','src/img/psicologaa.jpeg','src/img/psicologa.jpeg'],n=+(i.getAttribute('data-try')||0);if(n<e.length){i.setAttribute('data-try',n+1);i.src=e[n]}else{i.onerror=null}}
 </script>
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1208952827491954&amp;ev=PageView&amp;noscript=1"></noscript>
 <div class="glow" aria-hidden="true"></div>
 <main class="page">
-  <header class="brand"><i></i><span>Elisa Koscziol · Psicóloga</span><i></i></header>
+  <header class="brand"><i></i><span>Elisa Koscziol · Especialista em relacionamentos</span><i></i></header>
 
   <!-- ===== PARTE 1: resultado + prova + 1 botão ===== -->
   <div class="content" id="stepA">
@@ -201,8 +217,8 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
     <section class="sec">
       <p class="eyebrow">Prints reais de alunas</p>
       <h2 class="h">Elas pararam de correr atrás. <em>Olha o que aconteceu.</em></h2>
-      <figure class="shot"><figcaption class="cap">5 dias sem falar. Aí ele mandou: "sumida" 👀</figcaption><img src="src/img/print1.jpeg" alt="Print de aluna: depois de 5 dias sem comunicação, ele mandou mensagem perguntando se ela estava brava" width="888" height="832" loading="lazy"></figure>
       <figure class="shot"><figcaption class="cap">"Ele simplesmente perguntou onde íamos passar o ano novo"</figcaption><img src="src/img/print2.jpeg" alt="Print de aluna contando que ele perguntou onde iam passar o ano novo" width="833" height="741" loading="lazy"></figure>
+      <figure class="shot"><figcaption class="cap">O ex-noivo voltou a procurar. E eles reataram 🤍</figcaption><button class="zoom" type="button" data-full="src/img/print3.jpeg" aria-label="Ver o print inteiro"><img src="src/img/print3-trecho.jpg" alt="Print de aluna: o ex-noivo começou a fazer contato de novo e eles reataram o relacionamento" width="717" height="646" loading="lazy"><span class="zoom-tip">toca pra ler inteiro</span></button></figure>
     <div class="vn" id="vn">
       <p class="vn-lab">🎧 Áudio real de aluna</p>
       <p class="vn-q">"Sério Elisa, <b>esse foi o melhor investimento que eu fiz esse ano!</b>"</p>
@@ -236,13 +252,15 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
     <p class="eyebrow c">Responde rapidinho</p>
     <h2 class="h c">Quanto isso tá <em>te custando?</em></h2>
     <div class="costs"><span>Noites olhando o celular</span><span>Sua paz</span><span>Seu amor-próprio</span></div>
-    <div class="yq" id="yq" aria-live="polite">
-      <div class="yq-dots" id="yqDots"><i class="on"></i><i></i><i></i><i></i></div>
-      <div class="yq-body" id="yqBody"></div>
+    <div class="cv" id="cv">
+      <div class="cv-top"><img src="src/img/elisa-perfil.jpg" onerror="fotoExpert(this)" alt="Elisa Koscziol" width="38" height="38"><div class="cv-who"><b>Elisa</b><span id="cvSt">online</span></div><span class="cv-n" id="cvN">1 de 4</span></div>
+      <div class="cv-body" id="cvBody" aria-live="polite"></div>
+      <div class="cv-ans" id="cvAns"></div>
     </div>
   </div>
 
-  <footer><em>Elisa Koscziol</em>Psicóloga · © 2026<br>Conteúdo educativo. Não substitui acompanhamento psicológico.</footer>
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Print inteiro"><img src="data:," alt=""><button type="button" aria-label="Fechar">✕</button></div>
+  <footer><em>Elisa Koscziol</em>Especialista em relacionamentos · © 2026<br>Conteúdo educativo. Não substitui acompanhamento psicológico.</footer>
 </main>
 
 <script>
@@ -312,41 +330,69 @@ function fotoExpert(i){var e=['src/img/psicologaa.png','src/img/psicologa.png','
     try{if(navigator.vibrate)navigator.vibrate(8)}catch(e){}
     try{var a=$('vnAudio');if(a&&!a.paused)a.pause()}catch(e){}
     $('stepA').hidden=true;$('stepB').hidden=false;window.scrollTo(0,0);
-    startYes();
+    setTimeout(startYes,350);
   });
 
-  /* ===== 4 perguntas: 3 SIM + 1 bem forte no final ===== */
+  /* print inteiro ao tocar */
+  var lb=$('lb'),lbImg=lb.querySelector('img');
+  lb.addEventListener('click',function(){lb.classList.remove('on')});
+  Array.prototype.forEach.call(document.querySelectorAll('.zoom'),function(z){z.addEventListener('click',function(){lbImg.src=z.getAttribute('data-full');lb.classList.add('on')})});
+
+  /* ===== conversa: 3 de sim + 1 bem forte no final. Sim em cima, Não embaixo ===== */
   function startYes(){
     var Q=[
-      {t:'Você tá cansada de ser a que corre atrás?',y:'Sim, cansei',n:'Ainda não',ry:'Eu sei. Cansa fazer a parte de dois.',rn:'Mesmo assim você chegou até aqui. Algo te incomoda.'},
-      {t:'Você quer continuar desse jeito?',y:'Não, chega',n:'Tanto faz',ry:'Então não dá pra fazer igual e esperar outro final.',rn:'Se nada mudar, ele também não muda.'},
-      {t:'Você quer ver ele correndo atrás de você de novo?',y:'Sim, eu quero',n:'Talvez',ry:'Então presta atenção no que vem agora.',rn:'Talvez já é um começo. Continua comigo.'},
-      {t:'Seja sincera: se você continuar fazendo tudo igual, alguma coisa vai mudar?',y:'Não',n:'Sim',ry:'Exato. Do jeito que tá, não muda. Nem você, nem ele.',rn:'Você sabe que não. Se fosse mudar sozinho, já teria mudado.',emo:true}
+      {t:'Você tá cansada de ser sempre a que corre atrás?',e:'😔',ry:'Eu sei. Cansa fazer a parte de dois.',rn:'Mesmo assim você chegou até aqui. Alguma coisa te incomoda.'},
+      {t:'Você já ficou olhando o celular, esperando ele responder?',e:'😞',ry:'E cada minuto que você espera, ele sente que tem o controle.',rn:'Que bom. Mas aposto que já pensou demais numa resposta dele.'},
+      {t:'Você quer ver ele correndo atrás de você de novo?',e:'😍',ry:'Então presta atenção, porque isso tem jeito.',rn:'Tudo bem. Mas você merece ser escolhida, não ficar esperando.'},
+      {t:'Seja sincera: se você continuar fazendo tudo igual, alguma coisa vai mudar?',e:'',ry:'Você sabe que não. Se fosse mudar sozinho, já teria mudado.',rn:'Exato. Do jeito que tá, não muda. Nem você, nem ele.',emo:true}
     ];
-    var body=$('yqBody'),dots=$('yqDots').querySelectorAll('i'),i=0;
-    function dotsAt(k){for(var d=0;d<dots.length;d++)dots[d].className=d<k?'ok':(d===k?'on':'')}
-    function step(){
-      var q=Q[i];dotsAt(i);
-      body.innerHTML='<div class="yq-step'+(q.emo?' emo':'')+'"><p class="yq-n">'+(i+1)+' de '+Q.length+'</p><p class="yq-t"></p><div class="yq-o"><button type="button" class="yb main"></button><button type="button" class="yb alt"></button></div><p class="yq-r" hidden></p></div>';
-      body.querySelector('.yq-t').textContent=q.t;
-      var bs=body.querySelectorAll('.yb'),o=body.querySelector('.yq-o'),r=body.querySelector('.yq-r');
-      bs[0].textContent=q.y;bs[1].textContent=q.n;
-      function pick(main){
-        if(o.classList.contains('done'))return;
-        try{if(navigator.vibrate)navigator.vibrate(10)}catch(e){}
-        o.classList.add('done');(main?bs[0]:bs[1]).classList.add('pick');
-        r.textContent=main?q.ry:q.rn;r.hidden=false;
-        setTimeout(function(){i++;if(i<Q.length)step();else end()},reduce?200:(q.emo?1900:1250));
-      }
-      bs[0].addEventListener('click',function(){pick(true)});
-      bs[1].addEventListener('click',function(){pick(false)});
+    var body=$('cvBody'),ans=$('cvAns'),st=$('cvSt'),num=$('cvN'),i=0;
+    function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
+    function down(){body.scrollTop=body.scrollHeight}
+    function add(html,cls){var m=el('div','cm '+cls);m.innerHTML=html;body.appendChild(m);down();return m}
+    function plain(h){return h.replace(/<[^>]+>/g,'')}
+    function typing(html){
+      var d=add('<i></i><i></i><i></i>','her dots');st.textContent='digitando…';st.className='typing';
+      return wait(Math.max(900,Math.min(1900,800+plain(html).length*12))).then(function(){d.remove();st.textContent='online';st.className=''});
+    }
+    function her(html,cls){return typing(html).then(function(){add(html,'her'+(cls?' '+cls:''))})}
+    function read(html){var w=plain(html).split(/\s+/).length;return wait(Math.max(900,Math.min(2600,500+w*190)))}
+    function choose(q){
+      return new Promise(function(resolve){
+        ans.innerHTML='';
+        var y=el('button','ab sim');y.type='button';y.innerHTML='Sim'+(q.e?' <span class="em" aria-hidden="true">'+q.e+'</span>':'');
+        var n=el('button','ab nao');n.type='button';n.textContent='Não';
+        var done=false;
+        function pick(v){
+          if(done)return;done=true;
+          try{if(navigator.vibrate)navigator.vibrate(10)}catch(e){}
+          ans.innerHTML='';
+          add(v?('Sim'+(q.e?' '+q.e:'')):'Não','me');
+          resolve(v);
+        }
+        y.addEventListener('click',function(){pick(true)});n.addEventListener('click',function(){pick(false)});
+        ans.appendChild(y);ans.appendChild(n);
+      });
+    }
+    function waitingHint(){ans.innerHTML='<p class="hint">A Elisa tá digitando…</p>'}
+    function ask(){
+      var q=Q[i];num.textContent=(i+1)+' de '+Q.length;waitingHint();
+      return her(q.t,'q'+(q.emo?' emo':'')).then(function(){return choose(q)}).then(function(v){
+        waitingHint();
+        var r=v?q.ry:q.rn;
+        return wait(450).then(function(){return her(r)}).then(function(){return read(r)});
+      }).then(function(){i++;return i<Q.length?ask():end()});
     }
     function end(){
-      dotsAt(Q.length);
-      body.innerHTML='<div class="yq-step yq-end"><p class="ok3">✓ 4 de 4</p><p>Então você já sabe: <em>do jeito que tá, não muda.</em></p><p class="yq-how">A saída é o método da Elisa. Como funciona? Isso você só descobre lá dentro.</p><a class="btn pulse" id="yqGo" href="#">Ver como sair disso<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>';
-      $('yqGo').href=withQS('mulherhipnotica.html');
+      num.textContent='✓ 4 de 4';num.style.color='#3F8F5E';
+      var a='Então você já sabe: <b>do jeito que tá, não muda.</b>',b='A saída é o método. Como funciona? <b>Isso você só vê lá dentro</b> 👇';
+      return her(a).then(function(){return read(a)}).then(function(){return her(b)}).then(function(){
+        ans.innerHTML='<a class="btn pulse" id="yqGo" href="#">Ver como sair disso<span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><p class="btn-sub">Acesso na hora · condição do seu diagnóstico</p>';
+        $('yqGo').href=withQS('mulherhipnotica.html');
+      });
     }
-    step();
+    waitingHint();
+    her('Me responde com sinceridade, tá? <b>Só sim ou não.</b>').then(function(){return wait(900)}).then(ask);
   }
 
   /* ===== áudio da aluna: toca igual áudio de WhatsApp, liso e sem travar ===== */
