@@ -594,7 +594,7 @@ function emb(i){var k=i.getAttribute('data-emb')||(i.getAttribute('src')||'').sp
           <li><b>3</b><span>Copia o código, cola no app do banco e pronto. <strong>O acesso chega no seu e-mail.</strong></span></li>
         </ol>
       </div>
-      <p class="warn" data-warn>Quando o tempo zerar, o valor de R$ 27,90 sai do ar pra você.</p>
+      <p class="warn" data-warn>Quando o tempo zerar, o valor de R$ 17,00 sai do ar pra você.</p>
     </div>
     <div class="gtee reveal">
       <img onerror="emb(this)" src="src/img/30-DIAS-FINAL-1.svg" alt="Selo de garantia de 30 dias" width="72" height="72" loading="lazy">
@@ -668,7 +668,7 @@ function emb(i){var k=i.getAttribute('data-emb')||(i.getAttribute('src')||'').sp
 
 <div class="sticky" id="sticky" aria-hidden="true">
   <div class="sticky-in">
-    <div class="pr"><s>R$ 97</s><strong data-sticky-price>R$ 27,90</strong><small data-sticky-clock>expira em 14:34</small></div>
+    <div class="pr"><s>R$ 97</s><strong data-sticky-price>R$ 17,00</strong><small data-sticky-clock>expira em 14:34</small></div>
     <a class="btn" href="https://pay.cakto.com.br/nv3yhih_1361761" data-checkout tabindex="-1">Quero agora<span class="arr"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
   </div>
 </div>
@@ -677,10 +677,10 @@ function emb(i){var k=i.getAttribute('data-emb')||(i.getAttribute('src')||'').sp
 (function(){
   'use strict';
   /* ============ CONFIGURAÇÃO ============
-     CHECKOUT: link da oferta de R$ 27,90.
+     CHECKOUT: link da oferta de R$ 17,00.
      CHECKOUT_CHEIO: link da oferta de R$ 97 (crie na Sunize e cole aqui).
      A contagem de 14:34 começa quando a pessoa abre a página e continua de onde
-     parou se ela recarregar. Quando zera, a condição de R$ 27,90 acaba pra ela:
+     parou se ela recarregar. Quando zera, a condição de R$ 17,00 acaba pra ela:
        com CHECKOUT_CHEIO preenchido, os botões passam pro R$ 97;
        sem ele, os botões de compra se fecham. */
   var CHECKOUT = 'https://pay.cakto.com.br/nv3yhih_1361761';
@@ -743,7 +743,7 @@ function emb(i){var k=i.getAttribute('data-emb')||(i.getAttribute('src')||'').sp
     document.body.classList.add('expired');
     $('tbarTxt').textContent='Sua condição especial expirou';
     all('[data-clock]').forEach(function(c){c.hidden=true});
-    $('cdT').textContent='A condição de R$ 27,90 saiu do ar';
+    $('cdT').textContent='A condição de R$ 17,00 saiu do ar';
     all('[data-save],[data-warn],[data-timer],[data-pix],[data-why]').forEach(function(x){x.hidden=true});
     if(CHECKOUT_CHEIO){
       setCheckout(CHECKOUT_CHEIO);
@@ -833,7 +833,7 @@ function emb(i){var k=i.getAttribute('data-emb')||(i.getAttribute('src')||'').sp
   $('cta1').addEventListener('click',goOffer);
   all('a[data-jump]').forEach(function(a){a.addEventListener('click',goOffer)});
 
-  /* revelação do preço: risca o R$ 97 e mostra o R$ 27,90 quando ela chega nele */
+  /* revelação do preço: risca o R$ 97 e mostra o R$ 17,00 quando ela chega nele */
   var op=$('oprice'),seenOffer=false;
   function popPrice(){op.classList.add('on');seenOffer=true;upd()}
   if('IntersectionObserver' in window){
